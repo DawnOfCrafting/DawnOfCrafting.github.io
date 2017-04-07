@@ -150,16 +150,23 @@ aside {
 .navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .nav>li>a:hover {
     color: #564e4e;
 }
-}header {
+}
+header {
     min-height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/headerv2.jpg);
     color: #fff;
 }
+@media screen and (max-width:720px) {
+  header {
+    background-image: url(../img/headerv4.jpg);
+  }
+}
+
 header .header-content {
     padding: 100px 15px;
 }
