@@ -5813,6 +5813,16 @@ button.list-group-item-danger.active:focus {
   height: 76%;
   border: 0;
 }
+@media screen and (max-width:720px) {
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object,
+  .embed-responsive video {
+    left: 11%;
+  }
+}
+
 .embed-responsive-16by9 {
   padding-bottom: 56.25%;
 }
