@@ -20,9 +20,13 @@
 }
 
 .headerText {
-    margin-top: 0;
     color: #564e4e;
-    text-shadow: -1px 0 white, 0 1px white, 0px 0 white, 0 -0px white;
+    text-shadow: -0px 0 white, 0 1px white, 1px 0 white, 0 -0px white;
+}
+
+.titleText {
+    color: #564e4e;
+    text-shadow: -0px 0 #FFF, 0 3px #FFF, 3px 0 #FFF, 0 -0px #FFF;
 }
 
 .appstorebadge {
