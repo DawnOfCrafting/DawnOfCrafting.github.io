@@ -8,6 +8,17 @@
     width: 25%;
  }
 
+ .iphoneBG {
+    background-image: url(../img/iphone7.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+ }
+
+ .embedsizer {
+    height: 50%;
+ }
+
  .navbar-default, a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
