@@ -4,6 +4,11 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@font-face {
+    font-family: stonism;
+    src: url(../D3STONISM.TTF);
+}
+
 .titleImg {
     width: 60%;
 }
@@ -12,6 +17,12 @@
     .titleImg {
         width: 100%;
     }
+}
+
+.headerText {
+    margin-top: 0;
+    color: #564e4e;
+    text-shadow: -1px 0 white, 0 1px white, 0px 0 white, 0 -0px white;
 }
 
 .appstorebadge {
@@ -44,7 +55,7 @@ body {
     webkit-tap-highlight-color: #222;
 }
 .btn, .navbar-default, .navbar-default .navbar-header .navbar-brand, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: stonism, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
     border-color: #564e4e;
@@ -166,12 +177,12 @@ header {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url(../img/headerv2.jpg);
+    background-image: url(../img/headerv5.jpg);
     color: #fff;
 }
 @media screen and (max-width:720px) {
   header {
-    background-image: url(../img/headerv4.jpg);
+    background-image: url(../img/headerv5.jpg);
   }
 }
 
