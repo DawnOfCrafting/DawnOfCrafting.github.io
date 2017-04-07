@@ -3,23 +3,24 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
- .appstorebadge {
-    padding-top: 30px;
-    width: 250px;
- }
+.titleImg {
+    width: 60%;
+}
 
- .iphoneBG {
+.appstorebadge {
+    padding-top: 10px;
+    width: 250px;
+}
+
+.iphoneBG {
     background-image: url(../img/iphone7.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
- }
+}
+ 
 
- .embedsizer {
-    height: 50%;
- }
-
- .navbar-default, a {
+.navbar-default, a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
 }
