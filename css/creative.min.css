@@ -59,7 +59,7 @@ body, html {
     height: 100%;
     width: 100%}
 body {
-    font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+    font-family: stonism, Merriweather, 'Helvetica Neue', Arial, sans-serif;
     webkit-tap-highlight-color: #222;
 }
 .btn, .navbar-default, .navbar-default .navbar-header .navbar-brand, h1, h2, h3, h4, h5, h6 {
@@ -282,7 +282,7 @@ header .header-content .header-content-inner p {
     transform: translateY(-50%);
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category, .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: stonism, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
