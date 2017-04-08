@@ -26,6 +26,7 @@
 @media (min-width:600px) {
     .explanationImage {
         min-width: 600px;
+        min-height: 2713px;
     }
 }
 
