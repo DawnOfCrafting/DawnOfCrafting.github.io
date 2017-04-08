@@ -77,6 +77,7 @@ a {
     transition: all .35s;
     color: #564e4e;
 }
+
 a:focus, a:hover {
     color: #eb3812;
 }
@@ -88,9 +89,12 @@ p {
 .bg-primary {
     background-color: #9aa1b4;
 }
-.bg-dark {
-    background-color: #555;
+.bg-dark, .bg-dark a {
+    background-color: #9aa1b4;
     color: #fff;
+}
+.bg-dark a:focus, a:hover {
+    color: #eb3812;
 }
 .text-faded {
     color: rgba(255, 255, 255, .7);
