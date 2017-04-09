@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<game>
+	<title>Dawn of Crafting</title>
+	<release-date>Jan 09, 2016</release-date>
+	<website>http://www.dawnofcrafting.com/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+            <name>App Store</name>
+            <link>https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191</link>
+		</platform>
+	</platforms>
+	
+	<prices>
+		<price>
+			<currency>USD</currency>
+			<value>$0.99</value>
+		</price>
+    </prices>
+
+	<description>
+        TL;DR: Craft inventions and Discover recipes.
+        &lt;br&gt;&lt;br&gt;
+        Dawn of Crafting is a unique iOS game about crafting in the Stone Age.
+        &lt;br&gt;&lt;br&gt;
+        You are lost young Homo Sapien whos village was destroyed by the Homo Erectus. Another Sapien, Alf who happens to be a Master Crafter, one of the best crafters of the age, takes you as his apprentice and teaches you the fine points of crafting. You learn everything you can, increase your skills, discover new recipes and craft a shit ton of stuff. You start building a new village with Alf. Every now and then other people, like merchants, gamblers, Neanderthals, Erectus, thieves, storytellers, visit your village. Sometimes they talk and leave, sometimes they stay. But your time will eventually end. A new young crafter will start learning the fine arts of crafting and further progress humankind.
+        &lt;br&gt;&lt;br&gt;
+        You look out over your village and it’s inhabitants. Then remember how you started out with nothing but sticks, stones and a determination to survive. You remember with fondness how you built your first tools under the tutelage of Alf. You remember exploring and making discoveries, passing one technological achievement after another while slowly taking control of the environment. Now look how far you’ve come. But you can’t stop here. You must keep on honing your skills. You must keep inventing new ways to progress. Who knows what technologies the Neanderthals have? Yes, you can feel the inspiration and an idea slowly coming to life. There is something you have to build. You start walking toward your minion's hut to give him one more mission.
+        &lt;br&gt;&lt;br&gt;
+        Gather food, cook it, eat it, make an axe, chop down a tree, craft tools, craft containers, try to discover another recipe, need a better tool it, gather more wood, peel the wood, get some vine, sharpen some stones, try to craft a knife, tak to a Neanderthal, feel lost, think of what you were going to do, oh right discover that darn recipe!
+        &lt;br&gt;&lt;br&gt;
+        Dawn of Crafting is inspired from the games Minecraft, Ultima Online, A Dark Room, Little Alchemy.
+        &lt;br&gt;&lt;br&gt;
+        Achievements:
+        &lt;br&gt;
+        • Most updated iOS game of 2016, with 61 updates in 2016.&lt;br&gt;
+        • There seriously is nothing like this game in any platform.&lt;br&gt;
+        • 20% of our players spend 20+ hours, 10% spend 40+ hours playing.&lt;br&gt;
+        • The game is actually a mash of 6 genres including, RPG, puzzle, incremental, adventure, unfolding, crafting.&lt;br&gt;
+        • The game has been live in the App Store since its first version and evolved with the actions and feedback of players.&lt;br&gt;
+	</description>
+	
+	<history>
+
+The prototype for Mini Metro, Mind the Gap, was created at the end of April 2013 during the three-day Ludum Dare 26 Jam. The first pre-alpha build was made public in September 2013. Mini Metro was put up on Steam Greenlight in March 2014 and was greenlit within three weeks. Mini Metro was released on Early Access on the 11th of August, 2014. After more than a year of additional develoment, the game launched out of Early Access on 9th of November, 2015. The iOS and Android versions launched on the 18th of October, 2016.
+&lt;br&gt;&lt;br&gt;
+=======
+&lt;br&gt;
+Who am I?&lt;br&gt;&lt;br&gt;
+It took me years to consider that I should have studied design; being labeled “the computer kid” makes applying to study computer science at an engineering school a certain kind of inevitable choice. At Cal Poly San Luis Obispo I learned how to be a strong software engineer while finding ways to satisfy a growing desire to design. This lead to internships at Apple and Airbnb doing front-end web-app work, which led to realizing that I didn’t really want to do front-end web-app work. I did really want to develop iOS apps so I began building Blackbox, learning along the way.
+
+So you made a video game?&lt;br&gt;&lt;br&gt;
+
+The first time I actually grasped the phrase “outside-the-box” was when I had been presented 6 toothpicks and asked to create 4 equally-sized triangles anyway I could, without breaking any toothpicks. (Anyone that’s attempted this is probably familiar with the stages of “This is impossible.”, “Are you sure I can’t break them?”, and “What if I only break one of them?”) Once I stubbornly committed to the idea that this was clearly impossible, my friend placed 3 toothpicks to form a triangle before he reached for a 4th… He held it in the air at a curious diagonal while reaching with his other hand for a 5th. The 6th toothpick completed the prism and in a moment of frisson I saw how boxed in my thinking had become.&lt;br&gt;&lt;br&gt;
+Skills based in linear thinking, like engineering and math, A-to-B skills, are relatively straight-forward to hone and sharpen. But skills based in creative, circuitous, outside-the-box thinking are far more nebulous and hard to readily improve. There are rote methods that can help, like thinking from first-principles, but generally outside-the-box thinking skills are only expanded with practice.&lt;br&gt;&lt;br&gt;
+With practiced creative thinking, breakthroughs form more easily around the smallest grains of inspiration, however and whenever they decide to strike. It’s my hope that Blackbox can be both a conduit for strengthening outside-the-box, creative muscle and just a fun game.
+&lt;br&gt;&lt;br&gt;
+=======
+&lt;br&gt;
+Octodad started as a student project under the team name DGE2 (DePaul Game Experience 2) at DePaul University and was created by a team of 18 people within a time-span of 4 months. Our goal with the project was to produce a game from idea to release to be ready for the Independent Games Festival student competition. We entered the competition on November 1st, the same day that the game was released to the wild. We found ourselves pretty overwhelmed by the press attention that followed and on January 10th, 2011 we found out that we had actually been chosen as an IGF Student Showcase Winner! This means that out of 283 games we placed in the top 8 for the student section. We took the game on the road to the Game Developers Conference in San Francisco, CA and even managed to scrounge up a nice Microsoft Kinect demo for people to try out on the show floor.
+&lt;br&gt;&lt;br&gt;
+
+
+Why Crashlands Matters
+&lt;br&gt;&lt;br&gt;
+This game was developed by a team of 3 brothers, Adam, Seth, and Sam Coster, after Sam was diagnosed with stage 4b Lymphoma (cancer of the lymph system) in late 2013. It's been the thing that kept Sam truly living during the cancer treatments, even when he relapsed in late early 2015 and had to go through two stem-cell transplants to kill the damn thing.
+&lt;br&gt;&lt;br&gt;
+The game blends crafting and adventure with a frictionless sense of exploration, all achieved by removing the concept of INVENTORY and INVENTORY MANAGEMENT from the game. The inventory of Crashlands is infinite and self-managing, meaning players spend the vast majority of their time interacting with the world and not moving things around in menus.
+&lt;br&gt;&lt;br&gt;
+Then there's the epic story about the galactic trucker who just wants to deliver her damn packages, but has her wants thwarted by a megalomaniacal alien, Hewgodooko, and ends up getting entangled in a world's worth of problems. There are multiple alien races on display and 50,000+ words worth of story (that's a small book).
+&lt;br&gt;&lt;br&gt;
+And, lastly there's the Crossplatforminess. We wanted Crashlands to be available on everything - so you can get it on Steam and your iPhone and then sync your save between the devices. And the game isn't any different between the two, aside from how much of the world you can see. It controls beautifully regardless of platform and can be taken anywhere.
+&lt;br&gt;&lt;br&gt;
+Get in touch with us by reaching out to Sam@butterscotch-shenanigans.com. We're trying to make the launch of Crashlands the defining indie moment of early 2016, and we need all the extra power you can bring.
+&lt;br&gt;&lt;br&gt;
+Thank you,&lt;br&gt;
+Adam, Seth, Sam&lt;br&gt;
+The Butterscotch Brothers&lt;br&gt;
+
+    </history>
+
+	<features>
+		<feature>343 Items</feature>
+        <feature>237 Recipes</feature>
+        <feature>87 Quests</feature>
+        <feature>15 Skills</feature>
+        <feature>20+ hour playtime</feature>
+        <feature>RPG Equipment System</feature>
+        <feature>Character Progression</feature>
+        <feature>Built-in Recipe Book: No more wiki-ing!</feature>
+        <feature>Unfolding new Mechanics as you progress through the ages</feature>
+        <feature>In Depth Recipes: Simple recipes to OMFG 20 step recipes. </feature>
+        <feature>Surprising Events: Prepare to deal with the dangers of stone age.</feature>
+        <feature>Resource Management: Optimize your inventory space and resources. </feature>
+        <feature>Infinite Replayability: Even when you think it ends, there's more!</feature>
+        <feature>Simple Gathering: Click to gather, equip axe and click to lumberjack.</feature>
+        <feature>Thought Provoking: Computers crash and restart when its out of RAM. We’ve seen people crash while crafting.</feature>
+        <feature>3 Save Slots</feature>
+        <feature>Single Player</feature>
+        <feature>iCloud Saving</feature>
+        <feature>Achievements and Leaderboards</feature>
+        <feature>No Ads and No IAP Required</feature>
+	</features>
+	
+	<trailers>
+		<trailer>
+			<name>Trailer</name>
+			<youtube>9geCBN4n1-8</youtube>
+		</trailer>
+	</trailers>
+	
+	<awards>
+		<award>
+			<description>Winner in this highly relevant contest.</description>
+			<info>Award Location, 20 October, 1989</info>
+		</award>
+	</awards>
+	
+    
+    <quotes>
+        <quote>
+            <description>While playing this game, I continuously made the mistake of believing I'd figured out how this game works.
+                Every, single, time, the game would prove me wrong with new and cooler content. I'd tell you how exactly this is amazing, but it's more fun to find out yourself. Just trust me when I say that this game is simple, but full of depth. (And that the devs are fricken' geniuses!)</description>
+            <name>TheNinja64</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/sqvpstXY-1s/</link>
+        </quote>
+        <quote>
+            <description>I just started playing last night and I haven't stopped. Coming up to 20 hrs now. No need for sleep!</description>
+            <name>Tamienne</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/YznrvMJ_dxs/</link>
+        </quote>
+        <quote>
+            <description>I've played a lot of PC and console games, and I would never have believed I would get addicted to an iPhone game. Plus it has active developers, which is really great.</description>
+            <name>Adrik Nilolaev</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/RjTHbI817fY/</link>
+        </quote>
+        <quote>
+            <description>A simple to understand game with a ton to explore. Crafting new items and trying to discover new recipes makes it a great puzzle game as well. Constant updates with new features make me come back over and over.</description>
+            <name>Ruskiar</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/nWAYToOAm1g/</link>
+        </quote>
+        <quote>
+            <description>Recipes and the like mostly make sense in this game. Kind of hard to put down, since you actually get ti figure stuff out. Just don't ever, ever trust Kasino...</description>
+            <name>The Duke and the berry</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/YFd1VY9HZ0E/</link>
+        </quote>
+        <quote>
+            <description>This game doesn't tell you much about what it's about. I was kind of sketchy at first buying this game since there were not many reviews about this game and not many pictures as well. But i do have to say, this is one heck of a game!
+                
+                I've spent hours just on my phone playing this game. Sometimes, I'm afraid of even opening it because i know i'll be hooked for a while.
+                
+                If you're into crafting, this is THE game for you. The game's layout may look simple and basic but the addictiveness and "fun" stems from the mechanics of collecting and foraging for items, and then building upon those collected items. Discovering new recipes and raising your skill levels add to the joy of this simple but seriously addicting game.
+            </description>
+            <name>Panda Moniium</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/NM0bLtem_Mo/</link>
+        </quote>
+        <quote>
+            <description>There are several skills that you can improve by failing at recipes. Higher skills mean better success rates and access to more recipes. It has a Parallel Kingdoms vibe with the minimalist interface which I can only praise for being simplistic yet complex. The use of a minion who gets you mats is unique and results in a rather great partner dynamic. Again, I can easily get lost in this game, crafting and stockpiling mats. This is definitely worth the download.
+            </description>
+            <name>Peragin</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/eU3YTsSAhb4/</link>
+        </quote>
+    </quotes>
+
+    <additionals>
+        <additional>
+            <title>Pictures and Stuff</title>
+            <description>Download pics of us and Dawn of Crafting</description>
+            <link>https://www.dropbox.com/sh/ufi0p33llyd5wkt/AAAJKMPjTXdNXZjuXQ_8LqD-a?dl=0</link>
+        </additional>
+    </additionals>
+	
+    <credits>
+        <credit>
+            <person>Demir Berkay Yilmaz</person>
+            <website>https://twitter.com/demiculus</website>
+            <role>Design, Programming</role>
+        </credit>
+        <credit>
+            <person>Goktug Yilmaz</person>
+            <website>https://twitter.com/Esqarrouth</website>
+            <role>Design, Programming</role>
+        </credit>
+        <credit>
+            <person>John Doe</person>
+            <role>Artist, Freelancer</role>
+        </credit>
+    </credits>
+</game>
