@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- example file containing base tags -->
+
+<game>	
+	<title>Demi and Goku</title>
+	<founding-date>Jan 09, 2016</founding-date>
+	<website>http://www.dawnofcrafting.com</website>
+	<based-in>Ankara, Turkey</based-in>
+    <press-can-request-copy>TRUE</press-can-request-copy>
+
+	<press-contact>goku@dawnofcrafting.com</press-contact>
+	<phone></phone>
+	<address>
+	</address>
+    
+	<socials>
+        <social>
+            <name>App Store</name>
+            <link>https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191</link>
+        </social>
+		<social>
+			<name>Twitter</name>
+			<link>twitter.com/dawnofcrafting</link>
+		</social>
+		<social>
+			<name>Facebook</name>
+			<link>facebook.com/dawnofcrafting</link>
+		</social>
+		<social>
+			<name>Reddit</name>
+			<link>reddit.com/r/dawnofcrafting</link>
+		</social>
+	</socials>
+
+	<description>	
+        We are 2 brothers making a unique iOS game focused on crafting mechanics.
+        &lt;br&gt;&lt;br&gt;
+        We were frustrated by all the crappy game companies who didn't give a shit. So we decided to make one which did give a shit.
+        &lt;br&gt;&lt;br&gt;
+        We care about our players, their actions, inputs, thoughts, ideas. We care about our game and its playability.
+    </description>
+		
+	<histories>
+		<history>
+            TODO: Our general history?
+
+			<header>Early history</header>
+			<text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisi dolor. Pellentesque vitae eros velit, quis venenatis orci. Phasellus elit urna, semper ut gravida et, porta non dui. Aliquam erat volutpat. Aenean porta volutpat imperdiet. Maecenas venenatis, tellus eget vehicula vulputate, augue erat elementum quam, tincidunt laoreet magna orci et mauris. Proin porttitor pharetra nisi, accumsan sollicitudin neque varius a. Aenean ut massa ipsum, id hendrerit lacus. Maecenas posuere egestas nunc at cursus. Etiam mollis libero vel eros pulvinar aliquam. Sed vitae turpis sed nibh venenatis dictum. Sed suscipit orci justo, at sagittis ante. Sed leo nisl, ultricies in fermentum id, aliquam id dolor. Ut laoreet, felis id posuere bibendum, arcu ipsum lacinia est, eu lobortis velit enim eget mi. In ullamcorper ullamcorper enim ut gravida. Vivamus rutrum lacus mollis risus malesuada iaculis.</text>
+		</history>
+		<history>
+			<header>After that</header>
+			<text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem dui, volutpat eu adipiscing sed, rutrum aliquam lacus. Proin sollicitudin consequat dolor id dignissim. Aliquam sem turpis, sagittis lobortis viverra eget, varius vitae nunc. Proin ac lacus porttitor dui sollicitudin elementum. Nulla ut hendrerit est. Fusce vitae arcu erat, vel molestie est. Proin et placerat justo. Proin placerat arcu massa, eu blandit leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam eu lorem sed massa lobortis hendrerit vitae vel odio. Maecenas eget pulvinar tortor. Nunc vitae nisl ac odio bibendum luctus ac a leo. Suspendisse auctor elit et velit sagittis vehicula. Maecenas faucibus blandit rutrum. Duis et sem nibh. Vestibulum placerat elit et dui rhoncus accumsan.</text>
+		</history>
+				<history>
+			<header>After that</header>
+			<text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem dui, volutpat eu adipiscing sed, rutrum aliquam lacus. Proin sollicitudin consequat dolor id dignissim. Aliquam sem turpis, sagittis lobortis viverra eget, varius vitae nunc. Proin ac lacus porttitor dui sollicitudin elementum. Nulla ut hendrerit est. Fusce vitae arcu erat, vel molestie est. Proin et placerat justo. Proin placerat arcu massa, eu blandit leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam eu lorem sed massa lobortis hendrerit vitae vel odio. Maecenas eget pulvinar tortor. Nunc vitae nisl ac odio bibendum luctus ac a leo. Suspendisse auctor elit et velit sagittis vehicula. Maecenas faucibus blandit rutrum. Duis et sem nibh. Vestibulum placerat elit et dui rhoncus accumsan.</text>		</history>
+
+	</histories>
+    
+	<trailers>
+		<trailer>
+			<name>Trailer</name>
+			<youtube>9geCBN4n1-8</youtube>
+		</trailer>
+	</trailers>
+	
+	<awards>
+		<award>
+			<description>Winner in this highly relevant contest.</description>
+			<info>Award Location, 20 October, 1989</info>
+		</award>
+	</awards>
+	
+	<quotes>
+        <quote>
+            <description>Awesome dev team
+                Run into an issue? Send 'em a message in game! They respond fairly quickly and *gasp!* actually listen! Phenomenal work guys. I look forward to supporting this game for quite some time.
+            </description>
+            <name>JoJoMacXSC</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/i7EEQxYcgYg/</link>
+        </quote>
+		<quote>
+            <description>The developers are keeping it updated and take care of their players!😊
+                And the best feature I have ever seen is the possibility to actually talk to the developers!!
+            </description>
+			<name>Tridderz</name>
+			<website>Link</website>
+			<link>https://launchkit.io/reviews/fn-7-_kmJb8/</link>
+        </quote>
+        <quote>
+            <description>Amazing game, frequently updated, hours upon hours of fun, would recommend. Kudos to the developers for being so dedicated to creating such a fun game.
+            </description>
+            <name>Wwwwwildhero</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/iVQmCUppZDk/</link>
+        </quote>
+        <quote>
+            <description>I was drawn into this game in the early stages. The devs seem to be working hard to continue to support it. (Thanks guys! I look forward to the updates every week.)
+                I'm hoping that your imagination never runs out. I would love to see it continue on from using stone to metal. Moving on to potential blacksmithing. Perhaps even getting into some real complex items. This is truly a game where the journey is more fun then the destination. Thank you and keep it up!
+            </description>
+            <name>Chris041768</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/15FmBaJlbME/</link>
+        </quote>
+        <quote>
+            <description>Over 50 hours sunk into this game. You won't regret getting this game. You have to use use logic to figure out crafting recipes. Balance the need to eat with the need to craft items. Devs are active on Reddit and constantly update the game based on our ideas. Just get it
+            </description>
+            <name>Soviet63</name>
+            <website>Link</website>
+            <link>https://launchkit.io/reviews/IEwW_fJ0W8I/</link>
+        </quote>
+	</quotes>
+	
+	<press-can-request-copy>TRUE</press-can-request-copy> <!-- can be true or false -->
+	<monetization-permission>monetize</monetization-permission> <!-- can be: 	false (no video allowed),
+																			 	ask (permission on case-per-case basis),
+																			 	non-commercial (no monetization allowed),
+																			 	monetize (full permission) -->	
+	<additionals>
+		<additional>
+			<title>Pictures and Stuff</title>
+            <description>Download pics of us and Dawn of Crafting</description>
+			<link>https://www.dropbox.com/sh/ufi0p33llyd5wkt/AAAJKMPjTXdNXZjuXQ_8LqD-a?dl=0</link>
+		</additional>
+	</additionals>
+	
+	<credits>
+		<credit>
+			<person>Demir Berkay Yilmaz</person>
+            <website>https://twitter.com/demiculus</website>
+			<role>Design, Programming</role>
+		</credit>
+		<credit>
+			<person>Goktug Yilmaz</person>
+			<website>https://twitter.com/Esqarrouth</website>
+			<role>Design, Programming</role>
+		</credit>
+	</credits>
+	
+	<contacts>
+		<contact>
+			<name>Inquiries</name>
+			<mail>goku@dawnofcrafting.com</mail>
+		</contact>
+		<contact>
+			<name>Twitter</name>
+			<link>http://twitter.com/dawnofcrafting</link>
+		</contact>
+		<contact>
+			<name>Facebook</name>
+			<link>http://facebook.com/dawnofcrafting</link>
+		</contact>
+		<contact>
+			<name>Web</name>
+			<link>dawnofcrafting.com</link>
+		</contact>
+	</contacts>
+</game>
