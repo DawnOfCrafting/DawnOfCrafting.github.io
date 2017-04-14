@@ -40,3 +40,6 @@ If you want to add a project, copy the `_template` folder and rename it, re gene
 
 ## Google Analytics
 To add google analytics support simply add your *Tracker ID* as an argument like this `python generate.py UA-1234567-89`
+
+## Run command for Dawn of Crafting:
+python generate.py UA-44793738-2
