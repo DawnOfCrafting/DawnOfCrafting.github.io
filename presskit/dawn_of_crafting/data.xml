@@ -25,7 +25,7 @@
         &lt;br&gt;&lt;br&gt;
         Dawn of Crafting is a unique iOS game about crafting in the Stone Age.
         &lt;br&gt;&lt;br&gt;
-        You are lost young Homo Sapien whos village was destroyed by the Homo Erectus. Another Sapien, Alf who happens to be a Master Crafter, one of the best crafters of the age, takes you as his apprentice and teaches you the fine points of crafting. You learn everything you can, increase your skills, discover new recipes and craft a shit ton of stuff. You start building a new village with Alf. Every now and then other people, like merchants, gamblers, Neanderthals, Erectus, thieves, storytellers, visit your village. Sometimes they talk and leave, sometimes they stay. But your time will eventually end. A new young crafter will start learning the fine arts of crafting and further progress humankind.
+        You are lost young Homo Sapien whos village was destroyed by the Homo Erectus. Another Sapien, Alf who happens to be a Master Crafter, one of the best crafters of the age, takes you as his apprentice and teaches you the fine points of crafting. You learn everything you can, increase your skills, disfcover new recipes and craft a shit ton of stuff. You start building a new village with Alf. Every now and then other people, like merchants, gamblers, Neanderthals, Erectus, thieves, storytellers, visit your village. Sometimes they talk and leave, sometimes they stay. But your time will eventually end. A new young crafter will start learning the fine arts of crafting and further progress humankind.
         &lt;br&gt;&lt;br&gt;
         You look out over your village and it’s inhabitants. Then remember how you started out with nothing but sticks, stones and a determination to survive. You remember with fondness how you built your first tools under the tutelage of Alf. You remember exploring and making discoveries, passing one technological achievement after another while slowly taking control of the environment. Now look how far you’ve come. But you can’t stop here. You must keep on honing your skills. You must keep inventing new ways to progress. Who knows what technologies the Neanderthals have? Yes, you can feel the inspiration and an idea slowly coming to life. There is something you have to build. You start walking toward your minion's hut to give him one more mission.
         &lt;br&gt;&lt;br&gt;
@@ -36,10 +36,8 @@
         Achievements:
         &lt;br&gt;
         • Most updated iOS game of 2016, with 61 updates in 2016.&lt;br&gt;
-        • There seriously is nothing like this game in any platform.&lt;br&gt;
         • 20% of our players spend 20+ hours, 10% spend 40+ hours playing.&lt;br&gt;
-        • The game is actually a mash of 6 genres including, RPG, puzzle, incremental, adventure, unfolding, crafting.&lt;br&gt;
-        • The game has been live in the App Store since its first version and evolved with the actions and feedback of players.&lt;br&gt;
+        • The game is a mash a mash of 6 genres including, RPG, puzzle, incremental, adventure, unfolding, crafting.&lt;br&gt;
 	</description>
 	
 	<history>
@@ -87,16 +85,16 @@ The Butterscotch Brothers&lt;br&gt;
         <feature>87 Quests</feature>
         <feature>15 Skills</feature>
         <feature>20+ hour playtime</feature>
+        <feature>Resource Management</feature>
         <feature>RPG Equipment System</feature>
         <feature>Character Progression</feature>
         <feature>Built-in Recipe Book: No more wiki-ing!</feature>
         <feature>Unfolding new Mechanics as you progress through the ages</feature>
-        <feature>In Depth Recipes: Simple recipes to OMFG 20 step recipes. </feature>
+        <feature>In Depth Recipes: Simple to 20 step recipes. </feature>
         <feature>Surprising Events: Prepare to deal with the dangers of stone age.</feature>
-        <feature>Resource Management: Optimize your inventory space and resources. </feature>
         <feature>Infinite Replayability: Even when you think it ends, there's more!</feature>
-        <feature>Simple Gathering: Click to gather, equip axe and click to lumberjack.</feature>
-        <feature>Thought Provoking: Computers crash and restart when its out of RAM. We’ve seen people crash while crafting.</feature>
+        <feature>Simple Gathering: Tap to gather, equip axe and tap to lumberjack.</feature>
+        <feature>Thought Provoking: Computers crash when they’re out of RAM. We’ve seen people crash while crafting.</feature>
         <feature>3 Save Slots</feature>
         <feature>Single Player</feature>
         <feature>iCloud Saving</feature>
@@ -140,42 +138,33 @@ The Butterscotch Brothers&lt;br&gt;
             <link>https://launchkit.io/reviews/RjTHbI817fY/</link>
         </quote>
         <quote>
-            <description>A simple to understand game with a ton to explore. Crafting new items and trying to discover new recipes makes it a great puzzle game as well. Constant updates with new features make me come back over and over.</description>
-            <name>Ruskiar</name>
-            <website>Link</website>
-            <link>https://launchkit.io/reviews/nWAYToOAm1g/</link>
-        </quote>
-        <quote>
             <description>Recipes and the like mostly make sense in this game. Kind of hard to put down, since you actually get ti figure stuff out. Just don't ever, ever trust Kasino...</description>
             <name>The Duke and the berry</name>
             <website>Link</website>
             <link>https://launchkit.io/reviews/YFd1VY9HZ0E/</link>
         </quote>
-        <quote>
-            <description>This game doesn't tell you much about what it's about. I was kind of sketchy at first buying this game since there were not many reviews about this game and not many pictures as well. But i do have to say, this is one heck of a game!
-                
-                I've spent hours just on my phone playing this game. Sometimes, I'm afraid of even opening it because i know i'll be hooked for a while.
-                
-                If you're into crafting, this is THE game for you. The game's layout may look simple and basic but the addictiveness and "fun" stems from the mechanics of collecting and foraging for items, and then building upon those collected items. Discovering new recipes and raising your skill levels add to the joy of this simple but seriously addicting game.
-            </description>
-            <name>Panda Moniium</name>
-            <website>Link</website>
-            <link>https://launchkit.io/reviews/NM0bLtem_Mo/</link>
-        </quote>
-        <quote>
-            <description>There are several skills that you can improve by failing at recipes. Higher skills mean better success rates and access to more recipes. It has a Parallel Kingdoms vibe with the minimalist interface which I can only praise for being simplistic yet complex. The use of a minion who gets you mats is unique and results in a rather great partner dynamic. Again, I can easily get lost in this game, crafting and stockpiling mats. This is definitely worth the download.
-            </description>
-            <name>Peragin</name>
-            <website>Link</website>
-            <link>https://launchkit.io/reviews/eU3YTsSAhb4/</link>
-        </quote>
     </quotes>
 
     <additionals>
         <additional>
-            <title>Game Pictures</title>
+            <title>Dawn of Crafting Pictures</title>
             <description>Download pictures of Dawn of Crafting on</description>
             <link>https://www.dropbox.com/sh/ufi0p33llyd5wkt/AAAJKMPjTXdNXZjuXQ_8LqD-a?dl=0</link>
+        </additional>
+        <additional>
+            <title>Dawn of Crafting App Store</title>
+            <description>Download now!</description>
+            <link>https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191</link>
+        </additional>
+        <additional>
+            <title>Dawn of Crafting Subreddit</title>
+            <description>Our official community</description>
+            <link>https://www.reddit.com/r/dawnofcrafting</link>
+        </additional>
+        <additional>
+            <title>Dawn of Crafting Wikia</title>
+            <description>Our community driven Wiki</description>
+            <link>http://crafter-game.wikia.com/</link>
         </additional>
     </additionals>
 	
