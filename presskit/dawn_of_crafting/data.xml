@@ -191,8 +191,14 @@ The Butterscotch Brothers&lt;br&gt;
             <role>Design, Programming</role>
         </credit>
         <credit>
-            <person>John Doe</person>
-            <role>Artist, Freelancer</role>
+            <person>Mango Graphic Design</person>
+            <website>https://www.mangographicdesign.com/</website>
+            <role>Art, Freelancer</role>
+        </credit>
+        <credit>
+            <person>Federico Meloni</person>
+            <website>https://www.artstation.com/artist/federicomeloni777</website>
+            <role>Character Art, Freelancer</role>
         </credit>
     </credits>
 </game>
