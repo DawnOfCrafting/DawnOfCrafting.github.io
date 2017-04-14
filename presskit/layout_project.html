@@ -70,7 +70,11 @@
 {% block historieprojects_historyfeatures %}
     {% if project.history|length > 0 %}
         <h2 id="history">History</h2>
-        <p>{{ project.history }}</p>
+
+        {% for history in project.history.detailhistory %}
+            <strong>{{ history.header }}</strong>
+            <p>{{ history.text }}</p>
+        {% endfor %}
     {% endif %}
 
     {% if project.features|length > 0 %}
