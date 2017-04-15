@@ -25,7 +25,7 @@
         &lt;br&gt;&lt;br&gt;
         Dawn of Crafting is a unique iOS game about crafting in the Stone Age.
         &lt;br&gt;&lt;br&gt;
-        You are lost young Homo Sapien whos village was destroyed by the Homo Erectus. Another Sapien Alf, who happens to be a Master Crafter, one of the best crafters of the age, takes you as his apprentice and teaches you the fine points of crafting. You learn everything you can, increase your skills, discover new recipes and craft a shit ton of stuff. You start building a new village with Alf. Every now and then other people, like merchants, gamblers, Neanderthals, Erectus, thieves, storytellers, visit your village. Sometimes they talk and leave, sometimes they stay. But your time will eventually end. A new young crafter will start learning the fine arts of crafting and further progress humankind.
+        You are lost young Homo Sapien whos village was destroyed by the Homo Erectus. Another Sapien: Alf, who happens to be a Master Crafter, one of the best crafters of the age, takes you as his apprentice and teaches you the fine points of crafting. You learn everything you can, increase your skills, discover new recipes and craft a shit ton of stuff. You start building a new village with Alf. Every now and then other people, like merchants, gamblers, Neanderthals, Erectus, thieves, storytellers, visit your village. Sometimes they talk and leave, sometimes they stay. But your time will eventually end. A new young crafter will start learning the fine arts of crafting and further progress humankind.
         &lt;br&gt;&lt;br&gt;
         Gather food, cook it, eat it, make an axe, chop down a tree, craft tools, craft containers, try to discover another recipe, need a better tool it, gather more wood, peel the wood, get some vine, sharpen some stones, try to craft a knife, tak to a Neanderthal, feel lost, think of what you were going to do, oh right discover that darn recipe!
         &lt;br&gt;&lt;br&gt;
@@ -42,7 +42,7 @@
         <detailhistory>
             <header>A Prototype: Crafter Game</header>
             <text>
-                The prototype for Crafter Game started at Dec 2015. After a week of development it was submitted to the App Store and was released at Jan 09, 2016. It was also free with no Ads, no IAPs. It would take a real optimist to call it a game at this point. We knew even we wouldn't play it, so why would someone else?
+                Prototype for Crafter Game started at Dec 2015. After a week of development it was submitted to the App Store and was released at Jan 09, 2016. It was also free with no Ads, no IAPs. It would take a real optimist to call it a game at this point. Even we wouldn't play this game, so why would someone else?
                 &lt;br&gt;
                 &lt;br&gt;
                 While working on a little more playable version, we were expecting the game to be completely ignored. No downloads, no comments, no emails. Then someone left this review:
@@ -53,13 +53,13 @@
                 by Qazedsaw – Jan 12, 2016
                 &lt;br&gt;
                 &lt;br&gt;
-                We were surprised, someone actually gave a shit and 5 stars to our shitty little concept. We also learned that the player wanted to see more content and we learned about a new community, /r/incremental_games. We found out that this incremental games community is full of early adopters that will try games regardless of their graphics and completeness. This community was a gold mine for us because:
+                We were surprised, someone actually gave a shit and 5 stars to our shitty little concept. We also learned he wanted to see more content and we learned about a new community, /r/incremental_games. We found out that this incremental games community is full of early adopters that will try games regardless of their graphics and completeness. This community was a gold mine for us because:
                 &lt;br&gt;
                 &lt;br&gt;
-                1. This was our first game ever! We were good at playing games but didn't know how to make any game, especially a fun game.&lt;br&gt;
+                1. This was our first game ever! We didn't know how to make any game, especially a fun game.&lt;br&gt;
                 2. We lacked patience. We are not the types of people who can stick to a game in stealth mode for 2 years and release it, we needed that feedback adrenaline.&lt;br&gt;
                 &lt;br&gt;
-                So we started to post to /r/incremental_games whenever we made an update to get new players and new feedback. We had to hunt every new player one by one, let them play the game, note their criticsm and fix the stuff they told us.
+                So we started to post to /r/incremental_games whenever we made an update to get new players and new feedback. No one cared, so we had to hunt every new player one by one, convince them to play the game, note their criticsm and fix the stuff they told us.
             </text>
         </detailhistory>
         <detailhistory>
@@ -73,22 +73,25 @@
                 by Salaya – Jan 22, 2016
                 &lt;br&gt;
                 &lt;br&gt;
-                Wow, this dude who doesn't comment on any apps just left us 4 stars and said he is addicted to our crappy little game? Also gave us the idea to add a Recipe Book, which is basically a built in wiki for all the crafting recipes. He wants more quests, more recipes and recipes other than food. We didn't have anything else at that point. We didn't even had food that makes sense to craft, like peel bananas.
+                Wow, this dude who doesn't comment on any apps just left us 4 stars and said he is addicted to our crappy little game? Also gave us the idea to add a Recipe Book, which is basically a built in wiki for all the crafting recipes. He wants more quests, more recipes other than food. We didn't have anything else at that point. We didn't even had food that makes sense to craft at this point, like peeling bananas.
             </text>
         </detailhistory>
         <detailhistory>
             <header>Unfolding</header>
             <text>
-                We got into a habit of weekly updates because at the time your update was released 1 week after submitting to the App Store. So we sent an update for version 2 and worked on making version 3. Whenever version 2 went live, we uploaded version 3 and started working on version 4. This way we improved the game really fast in small amount of time. We asked for ideas, feedbacks from our player base which was slowly growing and interacting on our reddit community. Any good idea we received that we could build, we built it. Even bad ideas were very helpful because they were the seed that sparked better ideas on someone elses head. At this point the content and mechanics really got deeper and we started getting more praises and good reviews. We made the game $0.99 at this point.
+                We got into a habit of weekly updates because at the time app updates was released 1 week after submitting to the App Store. So we sent an update for version 2 and worked on making version 3. Whenever version 2 went live, we uploaded version 3 and started working on version 4. This way we improved the game really fast in small amount of time. We asked for ideas, feedbacks from our player base which was slowly growing and interacting on our reddit community. Any good idea we received that we could build, we built it. Even bad ideas were very helpful because they were the seed that sparked better ideas. At this point the content and mechanics really got deeper and we started getting more praises and good reviews. Some players said to at least charge a dollar so this gem wouldn't get lost between the crappy free games, so made it $0.99.
             </text>
         </detailhistory>
         <detailhistory>
             <header>UX and Graphics</header>
             <text>
-                There was a problem, a lot of people didn't understand how to play. They tried dragging stuff around but the game didn't work like that. It was a text based game with buttons! So owe added dragging and swiping type of phone native interactions so the game would feel more natural.
+                There was a problem, a lot of people didn't understand how to play. They tried dragging stuff around but the game didn't work like that. It was a text based game with buttons! So we added dragging and swiping type of interactions so the game would feel more natural.
                 &lt;br&gt;
                 &lt;br&gt;
-                Another problem was a lot of people who would love the game didn't even give it a chance. Because it was black and white, and the images were randomly stolen from Google Images. We were generating some revenue from our the game at this point, so we used that to hire some freelancer artists to make the game more pretty and the items look unified.
+                Another problem was a lot of people who would love the game didn't even give it a chance. Because the game was black and white, and the item images were randomly stolen from Google Images. We were generating some revenue from our the game at this point, so we used that to hire freelancer artists to make the game more pretty and the items look unified.
+                &lt;br&gt;
+                &lt;br&gt;
+                Some players said they felt spoiled from such a good game and wanted to donate, so we added IAP donations.
             </text>
         </detailhistory>
         <detailhistory>
