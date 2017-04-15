@@ -146,12 +146,15 @@
 	
 	<awards>
 		<award>
-			<description>Winner in this highly relevant contest.</description>
-			<info>Award Location, 20 October, 1989</info>
+            <description>#1 Most Liked Incremental Game</description>
+			<info>http://incrementalgame.com/</info>
 		</award>
+        <award>
+            <description>#1 Highest Rated Incremental Game</description>
+            <info>https://plaza.dsolver.ca/games</info>
+        </award>
 	</awards>
 	
-    
     <quotes>
         <quote>
             <description>While playing this game, I continuously made the mistake of believing I'd figured out how this game works.
