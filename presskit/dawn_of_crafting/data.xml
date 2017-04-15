@@ -77,12 +77,38 @@
             </text>
         </detailhistory>
         <detailhistory>
+            <header>Unfolding</header>
+            <text>
+                We got into a habit of weekly updates because at the time your update was released 1 week after submitting to the App Store. So we sent an update for version 2 and worked on making version 3. Whenever version 2 went live, we uploaded version 3 and started working on version 4. This way we improved the game really fast in small amount of time. We asked for ideas, feedbacks from our player base which was slowly growing and interacting on our reddit community. Any good idea we received that we could build, we built it. Even bad ideas were very helpful because they were the seed that sparked better ideas on someone elses head. At this point the content and mechanics really got deeper and we started getting more praises and good reviews. We made the game $0.99 at this point.
+            </text>
+        </detailhistory>
+        <detailhistory>
+            <header>UX and Graphics</header>
+            <text>
+                There was a problem, a lot of people didn't understand how to play. They tried dragging stuff around but the game didn't work like that. It was a text based game with buttons! So owe added dragging and swiping type of phone native interactions so the game would feel more natural.
+                &lt;br&gt;
+                &lt;br&gt;
+                Another problem was a lot of people who would love the game didn't even give it a chance. Because it was black and white, and the images were randomly stolen from Google Images. We were generating some revenue from our the game at this point, so we used that to hire some freelancer artists to make the game more pretty and the items look unified.
+            </text>
+        </detailhistory>
+        <detailhistory>
             <header>Crafter Game -----> Dawn of Crafting</header>
             <text>
                 March 17, 2017&lt;br&gt;
                 We made a post a few months ago to get suggestions for a new name. We got a lot of names, then made a poll with them. The name suggested by our active player AntiLiterat was instantly liked by the community at the first post and it also won the poll. So thats where Dawn of Crafting came from.
+                &lt;br&gt;
+                &lt;br&gt;
+                At this point we have thousands of more ideas to add and only a smaller percentage of the players will see them all anyways. So we started polishing the game, fixing bugs, adding quality of life features that affect all the players, not just the most hardcore.
             </text>
         </detailhistory>
+        <detailhistory>
+            <header>Global Launch</header>
+            <text>
+                May 18, 2017&lt;br&gt;
+                We think the game is just good enough and we're planning on to globally launching the game and making a lot of noise. We'll keep working on the updates but our 1 week schedule might change because of App Store mechanics.
+            </text>
+        </detailhistory>
+
     </history>
 
 	<features>
