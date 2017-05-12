@@ -86,7 +86,7 @@
         <h2 id="history">History</h2>
 
         {% for history in company.histories.history %}
-            <strong>{{ history.header }}</strong>
+            <strong id="{{ history.header[:2] }}">{{ history.header }}</strong>
             <p>{{ history.text }}</p>
         {% endfor %}
     {% endif %}
