@@ -8,10 +8,8 @@ Review Embargo Ending: 7AM CST May 18th
 
 Dawn of Crafting has been in development for 1.5 years by two brothers. 
 
-• "Dawn of Crafting continues to be the most underrated game on the App Store."  
-- Justin Davis, Executive Editor, IGN  
-• "I downloaded Dawn of Crafting and now I want to punch @ErrorJustin in the back of the head. I can't stop playing it."  
-- Steve Butts, Editor-in-Chief of IGN  
+• "Dawn of Crafting continues to be the most underrated game on the App Store." - Justin Davis, Executive Editor, IGN  
+• "I downloaded Dawn of Crafting and now I want to punch @ErrorJustin in the back of the head. I can't stop playing it." - Steve Butts, Editor-in-Chief of IGN  
 
 Story:   
 You are a lost young Homo Sapien whose village was destroyed by the Homo Erectus. Master Crafter Alf, takes you as his apprentice and teaches you the fine art of crafting. You learn everything you can, increase your skills, discover new recipes and craft a ton of stuff. You build a village one stick at a time and further progress humankind. But some forces will stand in the way of your progress...
