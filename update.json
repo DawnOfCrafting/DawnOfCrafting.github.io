@@ -2,16 +2,16 @@
 	"KillBuild": 95,
 	"LatestBuild": 100,
 	"GivingItems": [{
-		"GivingId": "Esq1",
+		"GiftId": "Esq1",
 		"PlayerName": "Esq",
-		"Id": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
+		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
 		"Item": "CraftersBook3",
 		"Amount": "2",
 		"Message": "You a cool dev!"
 	}, {
 		"GivingId": "Esq2",
 		"PlayerName": "Esq2",
-		"Id": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
+		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
 		"Item": "CraftersBook4",
 		"Amount": "3",
 		"Message": "You not a cool dev!"
