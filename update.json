@@ -22,5 +22,9 @@
 		"Item": "CraftersBook4",
 		"Amount": "3",
 		"Message": "You not a cool dev!"
+	}],
+	"UniqueTAPlayers": [{
+		"PlayerName": "Esq2",
+		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067"
 	}]
 }
