@@ -8,26 +8,9 @@
 		"Item": "CraftersBook3",
 		"Amount": "2",
 		"Message": "You a cool dev!"
-	}, {
-		"GiftId": "esqtest",
-		"PlayerName": "Esq",
-		"PlayerId": "550B5484-6E5D-4402-AD62-0F1ECA2A1D8E",
-		"Item": "Goop",
-		"Amount": "76",
-		"Message": "Hey Esq, thanks for doing this, here is your gift!"
-	}, {
-		"GiftId": "Esq2",
-		"PlayerName": "Esq2",
-		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
-		"Item": "CraftersBook4",
-		"Amount": "3",
-		"Message": "You not a cool dev!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "Esq2",
-		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067"
-	}, {
-		"PlayerName": "Esq23",
 		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067"
 	}]
 }
