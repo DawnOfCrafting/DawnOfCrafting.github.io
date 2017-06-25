@@ -5,12 +5,15 @@
 		"GiftId": "Esq1",
 		"PlayerName": "Esq",
 		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
-		"Item": "CraftersBook3",
+		"Item": "Turd",
 		"Amount": "2",
 		"Message": "You a cool dev!"
 	}],
 	"UniqueTAPlayers": [{
-		"PlayerName": "Esq2",
-		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067"
+		"PlayerName": "Esq",
+		"PlayerId": "550B5484-6E5D-4402-AD62-0F1ECA2A1D8E"
+	},{
+		"PlayerName": "Tye",
+		"PlayerId": "DC87C513-3687-4A8A-AC93-F3E7E5FD74E7"
 	}]
 }
