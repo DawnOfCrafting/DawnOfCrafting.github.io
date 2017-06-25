@@ -129,7 +129,8 @@ def blabla_projects():
 ###############################################################
 # ACTUAL PRESSKIT STUFF
 now_project = "."
-ga = sys.argv[1] if len(sys.argv) == 2 else None
+# ga = sys.argv[1] if len(sys.argv) == 2 else None
+ga = 'UA-44793738-2'
 blabla_ga()
 
 
