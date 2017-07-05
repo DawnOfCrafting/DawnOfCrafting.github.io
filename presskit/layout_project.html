@@ -65,6 +65,14 @@
             </table>
         </p>
     {% endif %}
+    {% if project.socials|length > 0 %}
+    <p>
+    <strong>Social:</strong><br/>
+    {% for social in project.socials.social %}
+    <a href="{{ parse_url(social.link) }}">{{ social.name }}</a><br/>
+    {% endfor %}
+    </p>
+    {% endif %}
 {% endblock %}
 
 {% block historieprojects_historyfeatures %}
