@@ -8,6 +8,13 @@
 		"Item": "Turd",
 		"Amount": "2",
 		"Message": "You a cool dev!"
+	}, {
+		"GiftId": "RalphGlove15",
+		"PlayerName": "Dolph",
+		"PlayerId": "3B4C598-E071-4B12-B4E3-B0FAA2D1F788",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
