@@ -15,6 +15,13 @@
 		"Item": "CraftersGlove15",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Esq12",
+		"PlayerName": "Esq",
+		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
+		"Item": "CraftersGlove15",
+		"Amount": "2",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
