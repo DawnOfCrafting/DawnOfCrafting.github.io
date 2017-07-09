@@ -20,8 +20,15 @@
 		"PlayerName": "Esq",
 		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
 		"Item": "CraftersGlove15",
-		"Amount": "2",
+		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Esq3",
+		"PlayerName": "Esq",
+		"PlayerId": "550B5484-6E5D-4402-AD62-0F1ECA2A1D8E",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "This worked!!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
