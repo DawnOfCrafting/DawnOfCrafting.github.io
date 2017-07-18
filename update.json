@@ -16,6 +16,20 @@
 		"Amount": "1",
 		"Message": "Here you go!"
 	}, {
+		"GiftId": "AntiliteratGlove20",
+		"PlayerName": "Antiliterat",
+		"PlayerId": "B2B38EBA-B1A3-45BF-9573-CB22C89F0E09",
+		"Item": "CraftersGlove20",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "AntiliteratGems",
+		"PlayerName": "Antiliterat",
+		"PlayerId": "B2B38EBA-B1A3-45BF-9573-CB22C89F0E09",
+		"Item": "ShinyStone",
+		"Amount": "10",
+		"Message": "Here you go!"
+	}, {
 		"GiftId": "Esq2",
 		"PlayerName": "Esq",
 		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
