@@ -92,6 +92,13 @@
 		"Item": "TacticalShinyTool",
 		"Amount": "1",
 		"Message": "A little gift"
+	}, {
+		"GiftId": "Safgranmas",
+		"PlayerName": "Saf",
+		"PlayerId": "B160D051-B44A-4AB9-AA20-0008787FC634",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Thanks for supporting us Sarah!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -132,5 +139,20 @@
 	}, {
 		"PlayerName": "Tommytang213",
 		"PlayerId": "D4AE1EA7-BA37-464C-95B2-A39A861FB0C0"
+	}, {
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3"
+	}, {
+		"PlayerName": "Pumpkin Butt",
+		"PlayerId": "6F41CB05-7E8D-4643-876A-0748838D93CF"
+	}, {
+		"PlayerName": "OneEye",
+		"PlayerId": "39A99FD7-923D-4B0A-9EFC-380B86F50210"
+	}, {
+		"PlayerName": "Fud",
+		"PlayerId": "DFDC5DE7-F73E-405B-A795-F4002ADCF657"
+	}, {
+		"PlayerName": "Amber",
+		"PlayerId": "5424DEFF-B42C-4435-AB9A-39C17D966894"
 	}]
 }
