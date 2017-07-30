@@ -1,6 +1,6 @@
 {
 	"KillBuild": 95,
-	"LatestBuild": 100,
+	"LatestBuild": 106,
 	"GiftItems": [{
 		"GiftId": "Esq1",
 		"PlayerName": "Esq",
@@ -106,6 +106,20 @@
 		"Item": "GrandmasMediumContainer",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "MikeMinues15Gloves",
+		"PlayerName": "Mike",
+		"PlayerId": "618BEF61-2D98-4044-B0C9-5566D8717204",
+		"Item": "CraftersGloveM15",
+		"Amount": "1",
+		"Message": "Sorry for the bug!"
+	}, {
+		"GiftId": "DelaguilaTest",
+		"PlayerName": "Delaguila",
+		"PlayerId": "63C9F458-247B-4343-8149-BFD7A8EBE3A4",
+		"Item": "RecipePartTablet",
+		"Amount": "3",
+		"Message": "Let me know if you get this gift."
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -167,5 +181,11 @@
 	}, {
 		"PlayerName": "Delaguila",
 		"PlayerId": "63C9F458-247B-4343-8149-BFD7A8EBE3A4"
+	}, {
+		"PlayerName": "Rosso",
+		"PlayerId": "FCD90340-6EFD-4FA6-AC29-5D1EAE267A12"
+	}, {
+		"PlayerName": "Darmia",
+		"PlayerId": "36BAAB15-0EA4-4AEF-B989-900819F4A44D"
 	}]
 }
