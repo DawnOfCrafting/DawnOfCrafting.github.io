@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Meme Generator</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+		<script src="https://cjco6.github.io/work/jcrop.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cjco6.github.io/work/jcrop.css">
+		<style>
+			body {
+    				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			}
+			
+			footer {
+			    border-top: 1px solid #d5d5d5;
+			    font-size: .8em;
+			}
+
+			#mainDiv {
+				position: relative;
+			}
+
+			#template {
+				display: block;
+				margin: 0 auto;
+				z-index: -5;
+			}
+			
+			label {
+				z-index: 4;	
+			}
+			
+			#canvas1, #label1, #browseButton1 {
+				position: absolute;
+				left: calc(50% - 621px + 68px);
+				top: 30px;
+				width: 144px;
+				height: 144px;
+			}
+
+			#canvas2, #label2, #browseButton2 {
+				position: absolute;
+				left: calc(50% - 621px + 244px);
+				top: 30px;
+				width: 144px;
+				height: 144px;
+			}
+
+			#canvas3, #label3, #browseButton3 {
+				position: absolute;
+				left: calc(50% - 621px + 420px);
+				top: 30px;
+				width: 144px;
+				height: 144px;
+			}
+
+			#canvas4, #label4, #browseButton4 {
+				position: absolute;
+				left: calc(50% - 621px + 620px);
+				top: 48px;
+				width: 112px;
+				height: 112px;
+			}
+
+			#canvas5, #label5, #browseButton5 {
+				position: absolute;
+				left: calc(50% - 621px + 785px);
+				top: 30px;
+				width: 144px;
+				height: 144px;
+			}
+			
+			#finishButton {
+				position: absolute;
+				left: calc(50% - 621px + 982px);
+				top: 31px;
+				width: 204px;
+				height: 146px;
+			}
+
+			.section {
+				display: inline-block;
+				color: #333333;
+				font-size: 1.4rem;
+				text-shadow: -1px -1px 1px #aaa,0px 2px 1px rgba(0,0,0,0.5);
+				text-align: center;
+    				font-weight: bold;
+				margin: 0 auto;
+				float: left;
+				width: 20%;
+			}
+			
+			.browseButton, #finishButton {
+    				-webkit-appearance: none;
+				opacity: 0;
+				overflow: visible;
+				z-index: 5;
+				cursor: pointer; 
+				cursor: hand;
+			}
+			
+			.check {
+				opacity: 0;	
+			}
+			
+			#jcrop1, #jcrop2, #jcrop3, #jcrop4, #jcrop5 {
+				display: inline-block;
+    				box-shadow: 3px 3px 5px #888888;
+			}
+			
+			#downloadLink {
+			    margin: auto;
+			    display: block;
+			    padding: 2px;
+			    /* Firefox */
+			    width: -moz-calc(50% - 500px);
+			    /* WebKit */
+			    width: -webkit-calc(50% - 500px);
+			    /* Opera */
+			    width: -o-calc(50% - 500px);
+			    /* Standard */
+			    width: calc(50% - 500px);
+			}
+		</style>
+		<script type="text/javascript">
+			var picture_width;
+			var picture_height;
+			var crop_max_width = 300;
+			var crop_max_height = 300;
+			var number = "1";
+
+			function picture(input, num) {
+				number = num;
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+					
+					reader.onload = function (e) {
+						$("#jcrop" + number).html("").append("<img src=\""+e.target.result+"\" alt=\"\" />");
+						
+						var img = new Image();
+						var height = img.height;
+						var width = img.width;
+						img.onload = function() {
+							if (img.width/img.height == 1) {
+								$("#jcrop" + number + " img").Jcrop({
+									onChange: function(coords) {
+										number = num;
+										canvas(coords);
+									},
+									onSelect: function(coords) {
+										number = num;
+										canvas(coords);
+									},
+									boxWidth: crop_max_width,
+									boxHeight: crop_max_height,
+									setSelect:   [ 0, 0, img.width, img.height ],
+									aspectRatio: 1
+								});
+							} else {
+								$("#jcrop" + number + " img").Jcrop({
+									onChange: function(coords) {
+										number = num;
+										canvas(coords);
+									},
+									onSelect: function(coords) {
+										number = num;
+										canvas(coords);
+									},
+									boxWidth: crop_max_width,
+									boxHeight: crop_max_height,
+									aspectRatio: 1
+								});
+							}
+						}
+						img.src = e.target.result;
+						
+					}
+					reader.readAsDataURL(input.files[0]);
+				} else if (input.className === "urlButton") {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+						if (input.value != "") {
+							$("#jcrop" + number).html("").append("<img src=\"https://cors.now.sh/"+input.value+"\" alt=\"\" crossOrigin='anonymous' />");
+
+							var img = new Image();
+							var height = img.height;
+							var width = img.width;
+							img.onload = function() {
+								if (img.width/img.height == 1) {
+									$("#jcrop" + number + " img").Jcrop({
+										onChange: function(coords) {
+											number = num;
+											canvas(coords);
+										},
+										onSelect: function(coords) {
+											number = num;
+											canvas(coords);
+										},
+										boxWidth: crop_max_width,
+										boxHeight: crop_max_height,
+										setSelect:   [ 0, 0, img.width, img.height ],
+										aspectRatio: 1
+									});
+								} else {
+									$("#jcrop" + number + " img").Jcrop({
+										onChange: function(coords) {
+											number = num;
+											canvas(coords);
+										},
+										onSelect: function(coords) {
+											number = num;
+											canvas(coords);
+										},
+										boxWidth: crop_max_width,
+										boxHeight: crop_max_height,
+										aspectRatio: 1
+									});
+								}
+							}
+							img.src = "https://cors.now.sh/"+input.value
+						}
+					}
+					reader.readAsDataURL(new File([input.value], "image"));
+				}
+			}
+
+			function convertImageToCanvas(image) {
+				var canvas = document.createElement("canvas");
+				canvas.width = image.width;
+				canvas.height = image.height;
+				canvas.getContext("2d").drawImage(image, 0, 0);
+				return canvas;
+			}
+
+			function canvas(coords){
+				var imageObj = $("#jcrop"+number+" img")[0];
+				var canvas = $("#canvas" + number)[0];
+				var context = canvas.getContext("2d");
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				
+				if (number == "4") {
+					context.fillStyle = "#AFA5A3";
+					context.fillRect(15, 15, 80, 70);
+					context.drawImage(imageObj, coords.x, coords.y, coords.w, coords.h, 0, 0, 112, 112);
+				} else {
+					context.fillStyle = "#564E4E";
+					context.fillRect(15, 15, 120, 120);
+					context.drawImage(imageObj, coords.x, coords.y, coords.w, coords.h, 0, 0, 144, 144);
+				}
+				
+				document.getElementById("check" + number).style.opacity = 1;
+			}
+			
+			function decode(imgElem) {
+			    return imgElem.replace(/^data:image\/(png|jpg);base64,/, "");
+			}
+
+			function combine(i1, i2, i3, i4, i5) {
+				var temp = new Image();
+				temp.onload = function() {
+					var base = convertImageToCanvas(temp);
+					var ctx=base.getContext("2d");
+					ctx.drawImage(i1, 68, 30, 144, 144);
+					ctx.drawImage(i2, 244, 30, 144, 144);
+					ctx.drawImage(i3, 420, 30, 144, 144);
+					ctx.drawImage(i4, 620, 48, 112, 112);
+					ctx.drawImage(i5, 785, 30, 144, 144);
+					var img = base.toDataURL("image/png");
+					upload(img);	
+				}
+				temp.src = "finaltemplate.png";
+			}
+			
+			function showMe(data) {
+			    if(data.success == true) {
+				window.location.href = "https://imgur.com/" + data.data.id;
+			    }
+			}
+
+			function upload(file) {
+				var clientId = "9ce1426908c7a4e";
+				var file = JSON.stringify(decode(file));
+				$.ajax({
+				    url: "https://api.imgur.com/3/upload",
+				    type: "POST",
+				    datatype: "json",
+				    data: {image: file},
+				    success: showMe,
+				    error: showMe,
+				    beforeSend: function (xhr) {
+					xhr.setRequestHeader("Authorization", "Client-ID " + clientId);
+				    }
+				});
+			}
+		</script>
+	</head>
+
+	<body background="bg.jpg">
+		<div id="mainDiv">
+			<img id="template" src="template.png" width="1242" height="208" draggable="false"></img>
+			<br>
+			<form id="mainForm" onkeypress="return event.keyCode != 13;" onsubmit='combine(document.getElementById("canvas1"),document.getElementById("canvas2"),document.getElementById("canvas3"),document.getElementById("canvas4"),document.getElementById("canvas5")); return false;'>
+				<div id="container">
+					<div class="section" width="20%">
+					Slot 1  <img src="checkmark.png" class="check" id="check1"></img><br>
+					URL  <input id="urlButton1" class="urlButton" onblur="picture(this, '1')" type="url" name=url1><br>
+						<input id="browseButton1" class="browseButton" onchange="picture(this, '1')" type=file name=file1><br>
+						<div id="jcrop1"></div>
+						<canvas id="canvas1" crossOrigin="anonymous" width="144" height="144"></canvas>
+						<label for="file" id="label1" width="144" height="144"></label>
+					</div>
+					<div class="section" width="20%">
+			    		Slot 2  <img src="checkmark.png" class="check" id="check2"></img><br>
+					URL  <input id="urlButton2" class="urlButton" onblur="picture(this, '2')" type="url" name=url2><br>
+						<input id="browseButton2" class="browseButton" onchange="picture(this, '2')" type=file name=file2><br>
+			    			<div id="jcrop2"></div>
+						<canvas id="canvas2" crossOrigin="anonymous" width="144" height="144"></canvas>
+						<label for="file" id="label2" width="144" height="144"></label>
+					</div>
+					<div class="section" width="20%">
+			    		Slot 3  <img src="checkmark.png" class="check" id="check3"></img><br>
+					URL  <input id="urlButton3" class="urlButton" onblur="picture(this, '3')" type="url" name=url3><br>
+						<input id="browseButton3" class="browseButton" onchange="picture(this, '3')" type=file name=file3><br>
+			    			<div id="jcrop3"></div>
+						<canvas id="canvas3" crossOrigin="anonymous" width="144" height="144"></canvas>
+						<label for="file" id="label3" width="144" height="144"></label>
+					</div>
+					<div class="section" width="20%">
+			    		Tool  <img src="checkmark.png" class="check" id="check4"></img><br>
+					URL  <input id="urlButton4" class="urlButton" onblur="picture(this, '4')" type="url" name=url4><br>
+						<input id="browseButton4" class="browseButton" onchange="picture(this, '4')" type=file name=file4><br>
+			    			<div id="jcrop4"></div>
+						<canvas id="canvas4" crossOrigin="anonymous" width="112" height="112"></canvas>
+						<label for="file" id="label4" width="112" height="112"></label>
+					</div>
+					<div class="section" width="20%">
+			    		Result  <img src="checkmark.png" class="check" id="check5"></img><br>
+					URL  <input id="urlButton5" class="urlButton" onblur="picture(this, '5')" type="url" name=url5><br>
+						<input id="browseButton5" class="browseButton" onchange="picture(this, '5')" type=file name=file5><br>
+			    			<div id="jcrop5"></div>
+						<canvas id="canvas5" crossOrigin="anonymous" width="144" height="144"></canvas>
+						<label for="file" id="label5" width="144" height="144"></label>
+					</div>
+					<br>
+			        <input type=submit value=Finish id="finishButton">
+		        </div>
+		    </form>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    </div>
+	</body>
+	<footer>
+		<br>
+		<a href="https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191" id="downloadLink"><img src="download.png" width="250" height="74"></img></a>
+	</footer>
+</html>
