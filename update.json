@@ -134,6 +134,13 @@
 		"Item": "RecipePartTablet",
 		"Amount": "3",
 		"Message": "Let me know if you get this gift."
+	}, {
+		"GiftId": "BeORTool",
+		"PlayerName": "BeOR",
+		"PlayerId": "3A3B87C6-1924-45C7-9067-38D373F82416",
+		"Item": "TacticalShinyTool",
+		"Amount": "3",
+		"Message": "A little gift"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -251,6 +258,9 @@
 		"PlayerId": "12B68596-67B8-43F1-AFCB-C25D03D8C67A"
 	}, {
 		"PlayerName": "Shy",
-		"PlayerId": "1B58C8E0-DEF3-4680-BAB5-6E83952E220D "
+		"PlayerId": "1B58C8E0-DEF3-4680-BAB5-6E83952E220D"
+	}, {
+		"PlayerName": "Setlist",
+		"PlayerId": "54406D85-80B8-43E0-8834-2EF91F3A61D5"
 	}]
 }
