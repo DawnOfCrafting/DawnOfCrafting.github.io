@@ -141,6 +141,13 @@
 		"Item": "TacticalShinyTool",
 		"Amount": "3",
 		"Message": "A little gift"
+	}, {
+		"GiftId": "MaiJokarAgain",
+		"PlayerName": "Mai",
+		"PlayerId": "DD1420AC-D11D-4FF2-B222-0D5282971FE3",
+		"Item": "JokarsStory",
+		"Amount": "1",
+		"Message": "A little gift"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -268,5 +275,8 @@
 	}, {
 		"PlayerName": "BeOR",
 		"PlayerId": "3A3B87C6-1924-45C7-9067-38D373F82416"
+	}, {
+		"PlayerName": "David",
+		"PlayerId": "76C1D845-FAE9-4E4D-839A-85E0FD61DD3D"
 	}] 
 }
