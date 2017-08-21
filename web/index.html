@@ -1,30 +1,72 @@
-<div id="gameDiv">
-	<div id="game" style="position:absolute;width:500px;height:500px">
+<div id="gameDiv" style="width: 100%; text-align:center">
+	<!-- <div id="game" style="width:800px;height:500px margin:0 auto;">
 		<canvas id="ctx" width="500" height="500" style="position:absolute;border:1px solid #000000;"></canvas>
-		<canvas id="ctx-ui" width="500" height="500" style="position:absolute;border:1px solid #000000;"></canvas>
-	</div>
-	
-	<!-- <div id="belowGame" style="margin-top:520px">	
-		<div id="chat-text" style="width:500px;height:100px;overflow-y:scroll">
-			<div>Hello!</div>
-		</div>
-		<form id="chat-form">
-			<input id="chat-input" type="text" style="width:500px"></input>
-		</form>
 	</div> -->
 </div>
 
-<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-<script src="/client/socket.js"></script>
-<script>
-	// 
-	var WIDTH = 500;
-	var HEIGHT = 500;
-	var socket = io();
+<script src="items.js"></script>
+<script src="storage.js"></script>
 
-	//grid
-	var grid = new Image()
-	grid.src = '/client/img/grid.png'
+<script>
+	//General
+	var SIDESIZE = 40;
+
+	//Canvas
+	var canvas = document.createElement('canvas')
+	var ctx = canvas.getContext("2d")
+	var gameDiv = document.getElementById('gameDiv')
+	var canvasWidth = window.innerWidth *2/3
+	var canvasHeight = window.innerHeight *2/3
+    canvas.width = canvasWidth
+    canvas.height = canvasHeight
+    canvas.style = "border:1px solid #000000; margin:0 auto"
+    gameDiv.appendChild(canvas)
+
+    var playerStorage = Storage()
+    var wildStorage = Storage()
+
+    var generateCount = 0
+
+    setInterval(function(){
+		ctx.clearRect(0,0,canvasWidth,canvasHeight);
+		generateRandomItem()
+		drawWildItems()
+		// for(var i in Player.list)
+		// 	Player.list[i].draw();
+		// for(var i in Food.list)
+		// 	Food.list[i].draw();
+	},40);
+
+    function drawWildItems(){
+    	for(var i in wildStorage.items) {
+    		var item = wildStorage.items[i]
+    		var image = new Image()
+    		image.src = item.image
+    		ctx.drawImage(image,item.x,item.y,SIDESIZE,SIDESIZE);
+    		ctx.fillStyle = 'black';
+			ctx.fillText(item.amount,item.x,item.y);
+    	}
+    }
+
+    function generateRandomItem() {
+    	generateCount += 1
+    	if(generateCount % 25 == 0) {
+    		var itemList = Item.getList()
+    		var randomItem = itemList[getRandomInt(0, itemList.length)]
+    		randomItem.x = getRandomInt(0, canvasWidth)
+    		randomItem.y = getRandomInt(0, canvasHeight/2)
+    		wildStorage.addItem(randomItem)
+    		generateCount = 0
+    	}
+    }
+
+    function getRandomInt(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+	}
+
+
 	
 	//chat
 	// var chatText = document.getElementById('chat-text');
@@ -54,154 +96,157 @@
 	// }
 
 	//game
-	var Img = {};
-	Img.player = new Image();
-	Img.player.src = '/client/img/player.png';
-	Img.food = new Image();
-	Img.food.src = '/client/img/bullet.png';
+	// var Img = {};
+	// Img.player = new Image();
+	// Img.player.src = '/client/img/player.png';
+	// Img.food = new Image();
+	// Img.food.src = '/client/img/bullet.png';
 	
-	var ctx = document.getElementById("ctx").getContext("2d");
-	var ctxUi = document.getElementById("ctx-ui").getContext("2d");
-	ctxUi.font = '30px Arial';
+	// var ctx = document.getElementById("ctx").getContext("2d");
+	// var ctxUi = document.getElementById("ctx-ui").getContext("2d");
+	// ctxUi.font = '30px Arial';
 	
-	var Player = function(initPack){
-		var self = {};
-		self.id = initPack.id;
-		self.x = initPack.x;
-		self.y = initPack.y;
-		self.r = initPack.r
+	// var Player = function(initPack){
+	// 	var self = {};
+	// 	self.id = initPack.id;
+	// 	self.x = initPack.x;
+	// 	self.y = initPack.y;
+	// 	self.r = initPack.r
 		
-		self.draw = function(){	
-			var x = self.x - Player.list[selfId].x + WIDTH/2;
-			var y = self.y - Player.list[selfId].y + HEIGHT/2;
+	// 	self.draw = function(){	
+	// 		var x = self.x - Player.list[selfId].x + WIDTH/2;
+	// 		var y = self.y - Player.list[selfId].y + HEIGHT/2;
 
-			if(selfId === self.id) {
-				x = WIDTH/2
-				y = HEIGHT/2
-			}
-			ctx.beginPath();
-			ctx.arc(x, y, self.r, 0, 2 * Math.PI, false); //(x,y,r,sAngle,eAngle,counterclockwise);
-			ctx.fillStyle = 'green';
-			ctx.fill();
-			ctx.lineWidth = 2;
-			ctx.strokeStyle = '#003300';
-			ctx.stroke();
+	// 		if(selfId === self.id) {
+	// 			x = WIDTH/2
+	// 			y = HEIGHT/2
+	// 		}
+	// 		ctx.beginPath();
+	// 		ctx.arc(x, y, self.r, 0, 2 * Math.PI, false); //(x,y,r,sAngle,eAngle,counterclockwise);
+	// 		ctx.fillStyle = 'green';
+	// 		ctx.fill();
+	// 		ctx.lineWidth = 2;
+	// 		ctx.strokeStyle = '#003300';
+	// 		ctx.stroke();
 
-			ctx.fillStyle = 'black';
-			var r = Math.round(Number(self.r))
-			ctx.fillText(r,x,y-15);
-		}
-		Player.list[self.id] = self;
-		return self;
-	}
-	Player.list = {};
+	// 		ctx.fillStyle = 'black';
+	// 		var r = Math.round(Number(self.r))
+	// 		ctx.fillText(r,x,y-15);
+	// 	}
+	// 	Player.list[self.id] = self;
+	// 	return self;
+	// }
+	// Player.list = {};
 		
-	var Food = function(initPack){
-		var self = {};
-		self.id = initPack.id;
-		self.x = initPack.x;
-		self.y = initPack.y;
-		self.r = initPack.r;
+	// var Food = function(initPack){
+	// 	var self = {};
+	// 	self.id = initPack.id;
+	// 	self.x = initPack.x;
+	// 	self.y = initPack.y;
+	// 	self.r = initPack.r;
 		
-		self.draw = function(){
-			var x = self.x - Player.list[selfId].x + WIDTH/2;
-			var y = self.y - Player.list[selfId].y + HEIGHT/2;
+	// 	self.draw = function(){
+	// 		var x = self.x - Player.list[selfId].x + WIDTH/2;
+	// 		var y = self.y - Player.list[selfId].y + HEIGHT/2;
 			
-			ctx.beginPath();
-			ctx.arc(x, y, self.r, 0, 2 * Math.PI, false);
-			ctx.fillStyle = 'green';
-			ctx.fill();
-			ctx.lineWidth = 2;
-			ctx.strokeStyle = '#003300';
-			ctx.stroke();
-		}
+	// 		ctx.beginPath();
+	// 		ctx.arc(x, y, self.r, 0, 2 * Math.PI, false);
+	// 		ctx.fillStyle = 'green';
+	// 		ctx.fill();
+	// 		ctx.lineWidth = 2;
+	// 		ctx.strokeStyle = '#003300';
+	// 		ctx.stroke();
+	// 	}
 		
-		Food.list[self.id] = self;		
-		return self;
-	}
-	Food.list = {};
+	// 	Food.list[self.id] = self;		
+	// 	return self;
+	// }
+	// Food.list = {};
 	
-	var selfId = null;
+	// var selfId = null;
 
-	socket.on('init',function(data){
-		// console.log('Data: ' + JSON.stringify(data))
-		if(data.selfId)
-			selfId = data.selfId;
-		//{ player : [{id:123,number:'1',x:0,y:0},{id:1,number:'2',x:0,y:0}], bullet: []}
-		for(var i = 0 ; i < data.player.length; i++){
-			new Player(data.player[i]);
-		}
-		for(var i = 0 ; i < data.food.length; i++){
-			new Food(data.food[i]);
-		}
-	});
+	// socket.on('init',function(data){
+	// 	// console.log('Data: ' + JSON.stringify(data))
+	// 	if(data.selfId)
+	// 		selfId = data.selfId;
+	// 	//{ player : [{id:123,number:'1',x:0,y:0},{id:1,number:'2',x:0,y:0}], bullet: []}
+	// 	for(var i = 0 ; i < data.player.length; i++){
+	// 		new Player(data.player[i]);
+	// 	}
+	// 	for(var i = 0 ; i < data.food.length; i++){
+	// 		new Food(data.food[i]);
+	// 	}
+	// });
 	
-	socket.on('update',function(data){
-		//{ player : [{id:123,x:0,y:0},{id:1,x:0,y:0}], bullet: []}
-		for(var i = 0 ; i < data.player.length; i++){
-			var pack = data.player[i];
-			var p = Player.list[pack.id];
-			if(p){
-				if(pack.x !== undefined)
-					p.x = pack.x;
-				if(pack.y !== undefined)
-					p.y = pack.y;
-				if(pack.r !== undefined)
-					p.r = pack.r
-			}
-		}
-		for(var i = 0 ; i < data.food.length; i++){
-			var pack = data.food[i];
-			var b = Food.list[data.food[i].id];
-			if(b){
-				if(pack.x !== undefined)
-					b.x = pack.x;
-				if(pack.y !== undefined)
-					b.y = pack.y;
-			}
-		}
-	});
+	// socket.on('update',function(data){
+	// 	//{ player : [{id:123,x:0,y:0},{id:1,x:0,y:0}], bullet: []}
+	// 	for(var i = 0 ; i < data.player.length; i++){
+	// 		var pack = data.player[i];
+	// 		var p = Player.list[pack.id];
+	// 		if(p){
+	// 			if(pack.x !== undefined)
+	// 				p.x = pack.x;
+	// 			if(pack.y !== undefined)
+	// 				p.y = pack.y;
+	// 			if(pack.r !== undefined)
+	// 				p.r = pack.r
+	// 		}
+	// 	}
+	// 	for(var i = 0 ; i < data.food.length; i++){
+	// 		var pack = data.food[i];
+	// 		var b = Food.list[data.food[i].id];
+	// 		if(b){
+	// 			if(pack.x !== undefined)
+	// 				b.x = pack.x;
+	// 			if(pack.y !== undefined)
+	// 				b.y = pack.y;
+	// 		}
+	// 	}
+	// });
 	
-	socket.on('remove',function(data){
-		//{player:[12323],bullet:[12323,123123]}
-		for(var i = 0 ; i < data.player.length; i++){
-			delete Player.list[data.player[i]];
-		}
-		for(var i = 0 ; i < data.food.length; i++){
-			delete Food.list[data.food[i]];
-		}
-	});
+	// socket.on('remove',function(data){
+	// 	//{player:[12323],bullet:[12323,123123]}
+	// 	for(var i = 0 ; i < data.player.length; i++){
+	// 		delete Player.list[data.player[i]];
+	// 	}
+	// 	for(var i = 0 ; i < data.food.length; i++){
+	// 		delete Food.list[data.food[i]];
+	// 	}
+	// });
 	
-	setInterval(function(){
-		if(!selfId)
-			return
-		ctx.clearRect(0,0,500,500);
-		drawGrid();
-		// drawScore();
-		for(var i in Player.list)
-			Player.list[i].draw();
+	// setInterval(function(){
+	// 	console.log(windowHeight)
 
-		console.log('FoodList: ' + JSON.stringify(Food.list.length))
-		console.log('Player: ' + Player.list[selfId].x + ',' + Player.list[selfId].y)
-		for(var i in Food.list)
-			Food.list[i].draw();
-	},40);
+
+	// 	if(!selfId)
+	// 		return
+	// 	ctx.clearRect(0,0,500,500);
+	// 	drawGrid();
+	// 	// drawScore();
+	// 	for(var i in Player.list)
+	// 		Player.list[i].draw();
+
+	// 	console.log('FoodList: ' + JSON.stringify(Food.list.length))
+	// 	console.log('Player: ' + Player.list[selfId].x + ',' + Player.list[selfId].y)
+	// 	for(var i in Food.list)
+	// 		Food.list[i].draw();
+	// },400);
 	
-	var drawGrid = function(){
-		var player = Player.list[selfId];
-		var x = WIDTH/2 - player.x;
-		var y = HEIGHT/2 - player.y;
-		ctx.drawImage(grid,x,y);
-	}
+	// var drawGrid = function(){
+	// 	var player = Player.list[selfId];
+	// 	var x = WIDTH/2 - player.x;
+	// 	var y = HEIGHT/2 - player.y;
+	// 	ctx.drawImage(grid,x,y);
+	// }
 	
-	var drawScore = function(){
+	// var drawScore = function(){
 		// if(lastScore === Player.list[selfId].score)
 		// 	return;
 		// lastScore = Player.list[selfId].score;
 		// ctxUi.clearRect(0,0,500,500);
 		// ctxUi.fillStyle = 'white';
 		// ctxUi.fillText(Player.list[selfId].score,0,30);
-	}
+	// }
 	// var lastScore = null;
 	
 	document.onkeydown = function(event){
@@ -236,7 +281,6 @@
 		var x = -250 + event.clientX - 8;
 		var y = -250 + event.clientY - 8;
 		var angle = Math.atan2(y,x) / Math.PI * 180;
-		socket.emit('keyPress',{inputId:'mouseAngle',state:angle});
 	}
 	
 	document.oncontextmenu = function(event){
