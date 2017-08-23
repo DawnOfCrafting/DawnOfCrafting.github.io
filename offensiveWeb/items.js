@@ -134,7 +134,7 @@ Gold = function(amount) {
         id: "Gold",
         name: "Gold",
         image: "./img/items/Gold.png",
-        inputs: [Jew(2)]
+        inputs: [Jew(1)]
     })
     if(amount) { self.amount = amount }
     return self
