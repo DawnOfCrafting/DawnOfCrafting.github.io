@@ -1,20 +1,40 @@
 <div id="gameDiv" style="width: 100%; text-align:center">
-	<!-- <div id="game" style="width:800px;height:500px margin:0 auto;">
-		<canvas id="ctx" width="500" height="500" style="position:absolute;border:1px solid #000000;"></canvas>
-	</div> -->
+	<a id="appstoreBadge" href="https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191">
+        <img src="../img/AppstoreBadge.svg" style="width:100%">
+    </a>
 </div>
 
 <style type="text/css">
-    /*.button{
-        background: url(./img/craftbutton.png) no-repeat;
-        background-size: contain;
-        cursor:pointer;
-        border: none;
-        width: 150px;
-	    height: 150px;
-	    position: absolute;
-    }*/
+.video {
+  position: absolute;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 12%;
+  bottom: 0;
+  left: 12%;
+  width: 76%;
+  height: 76%;
+  border: 0;
+}
 </style>
+
+
+<!-- <center>
+    <div class="iphoneBG">
+        <div class="embedsizer">
+            <div class="embed-responsive embed-responsive-custom">
+                
+            </div>
+        </div>
+    </div>
+</center> -->
+
+
+<!-- <a href="https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191">
+    <img src="img/AppstoreBadge.svg" alt="" class="appstorebadge">
+    <h3 class="headerText">Universal app for iOS 8.0+</h3>
+</a> -->
 
 <!-- <div id="craftTable">
 	
@@ -92,6 +112,20 @@
 			recipe.innerHTML += text + '<br><br>'
 		}
 	}
+
+	//Download DoC & Video
+	var aspectRatio = 1.78
+	var vidWidth = canvasHeight/aspectRatio
+	var vidContainer = document.createElement('div')
+	vidContainer.style = "top:0;position:absolute; left: " + (canvasWidth + 300) + ";height:" + canvasHeight + ";width:" + vidWidth
+	gameDiv.appendChild(vidContainer)
+	var video = document.createElement('iframe')
+	video.src = "https://www.youtube.com/embed/MGZnoE4RRhM?ecver=2"
+	video.style = "width:100%;height:" + canvasHeight
+	vidContainer.appendChild(video)
+
+	var appstoreBadge = document.getElementById('appstoreBadge')
+	appstoreBadge.style = "position:absolute;left:" + (canvasWidth + 300) + ";top:" + canvasHeight*1.01 + "px;width:" + vidWidth
 	
 	// Init Storagees
 	var wildStorage = Storage(
