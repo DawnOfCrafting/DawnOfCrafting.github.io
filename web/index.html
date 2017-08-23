@@ -88,11 +88,6 @@
 			recipe.innerHTML += text + '<br><br>'
 		}
 	}
-
-
-
-
-
 	
 	// Init Storagees
 	var wildStorage = Storage(
@@ -132,14 +127,13 @@
 
     var craftTable = Entity(crafTableImg,0,canvasHeight*2/3,canvasWidth,canvasHeight/3)
     var craftbutton = Entity(craftButtonImg,canvasWidth*3/4 - PADDING,canvasHeight*2/3 + PADDING,canvasWidth/4,canvasHeight/3 - PADDING * 2,'Craft')
-    // Game
-    var generateCount = 0
 
+    //Game Loop & Draw
     setInterval(function(){
 		ctx.clearRect(0,0,canvasWidth,canvasHeight);
 		ctxBg.clearRect(0,0,canvasWidth,canvasHeight);
 		generateRandomItem()
-		// drawBackground(ctxBg)
+
 		drawStorage(ctxBg, wildStorage)
 		drawStorage(ctxBg, playerStorage)
 		drawCraftTable(craftTable)
@@ -147,16 +141,10 @@
 		drawStorage(ctxBg, craftTableInputStorage)
 		drawStorage(ctxBg, craftTableOutputStorage)
 		
-		// console.log("=============")
 		drawItemsInStorage(wildStorage)
 		drawItemsInStorage(playerStorage)
 		drawItemsInStorage(craftTableInputStorage)
 		drawItemsInStorage(craftTableOutputStorage)
-
-		// for(var i in Player.list)
-		// 	Player.list[i].draw();
-		// for(var i in Food.list)
-		// 	Food.list[i].draw();
 	},40);
 
     function drawCraftTable(entity) {
@@ -187,6 +175,8 @@
     	}
 	}
     
+    //Generating Items
+    var generateCount = 0
     function generateRandomItem() {
     	generateCount += 1
     	if(generateCount % 25 == 0) {
@@ -197,16 +187,15 @@
     	}
     }
 
-
     // Tap Actions
     function mouseOnPos(position) {
-    	if(searchStorage(wildStorage,playerStorage,0,position)) { return }
+    	if(searchAndAddToStorage(wildStorage,playerStorage,0,position)) { return }
     }
 
     function mouseTappedPos(position) {    	
-    	if(searchStorage(playerStorage,craftTableInputStorage,1,position)) { return }
-    	if(searchStorage(craftTableInputStorage, playerStorage,1,position)) { return }
-    	if(searchStorage(craftTableOutputStorage, playerStorage,0,position)) { return }
+    	if(searchAndAddToStorage(playerStorage,craftTableInputStorage,1,position)) { return }
+    	if(searchAndAddToStorage(craftTableInputStorage, playerStorage,1,position)) { return }
+    	if(searchAndAddToStorage(craftTableOutputStorage, playerStorage,0,position)) { return }
 
 		if(isInBounds(position,craftbutton)) {
 			var itemList = Item.getCraftableList() 
@@ -230,7 +219,7 @@
 		return false
 	}
 
-	function searchStorage(fromSt,toSt,amount,position) { //fromStorage, toStorage
+	function searchAndAddToStorage(fromSt,toSt,amount,position) { //fromStorage, toStorage
 		for(var i in fromSt.items) {
 			if(isInBounds(position,fromSt.items[i])){
 				if(amount != 1) {
