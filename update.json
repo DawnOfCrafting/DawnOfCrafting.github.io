@@ -148,7 +148,14 @@
 		"Item": "JokarsStory",
 		"Amount": "1",
 		"Message": "A little gift"
-	}],
+	}, {
+		"GiftId": "BLostitems",
+		"PlayerName": "B",
+		"PlayerId": "93C6AB53-CD18-4C59-A2D2-3C5F187A8B67",
+		"Item": "ShinyStone",
+		"Amount": "10",
+		"Message": "Sorry for the lost items :("
+	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
 		"PlayerId": "04C91867-2168-4EC7-8402-DC6B5F0E7109"
@@ -278,5 +285,14 @@
 	}, {
 		"PlayerName": "David",
 		"PlayerId": "76C1D845-FAE9-4E4D-839A-85E0FD61DD3D"
+	}, {
+		"PlayerName": "Cent",
+		"PlayerId": "E9D08FFC-1FE0-468D-95A3-E17EB22A6AD2"
+	}, {
+		"PlayerName": "Stephanie",
+		"PlayerId": "82B6ED71-679B-40DF-8427-100DDDCFD73A"
+	}, {
+		"PlayerName": "Sin",
+		"PlayerId": "9A7A1145-F34A-483D-B785-C44E06E67D81"
 	}] 
 }
