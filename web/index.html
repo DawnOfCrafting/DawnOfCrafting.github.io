@@ -25,6 +25,7 @@
 	<img src="./img/storage.png" style="position:absolute">
 </div> -->
 
+<script src="./lib.js"></script>
 <script src="./items.js"></script>
 <script src="./storage.js"></script>
 
@@ -49,7 +50,6 @@
 	    return ctx
 	}
 	var ctxBg = Canvas()
-	// drawBackground(ctxBg)
 	var ctx = Canvas()
 
 	//Recipe List
@@ -84,7 +84,11 @@
 				text += recipes[i].inputs[k].name + '(' + recipes[i].inputs[k].amount + ')'
 			}
 			text += " = "
-			text += recipes[i].name
+			if(playerFoundRecipes[recipes[i].id]) {
+				text += recipes[i].name
+			} else {
+				text += "?"
+			}
 			recipe.innerHTML += text + '<br><br>'
 		}
 	}
@@ -187,34 +191,29 @@
     	}
     }
 
-    // Tap Actions
+    // Mouse/Tap Actions
     function mouseOnPos(position) {
     	if(searchAndAddToStorage(wildStorage,playerStorage,0,position)) { return }
     }
 
     function mouseTappedPos(position) {    	
     	if(searchAndAddToStorage(playerStorage,craftTableInputStorage,1,position)) { return }
-    	if(searchAndAddToStorage(craftTableInputStorage, playerStorage,1,position)) { return }
-    	if(searchAndAddToStorage(craftTableOutputStorage, playerStorage,0,position)) { return }
+    	if(searchAndAddToStorage(craftTableInputStorage,playerStorage,1,position)) { return }
+    	if(searchAndAddToStorage(craftTableOutputStorage,playerStorage,0,position)) { return }
 
+    	if(craftButtonTapAction(position)) { return }
+	}
+
+	function craftButtonTapAction(position) {
 		if(isInBounds(position,craftbutton)) {
 			var itemList = Item.getCraftableList() 
 			for(var i in itemList) {
 				if(itemList[i].craftThis(craftTableInputStorage, craftTableOutputStorage)) {
 					playerFoundRecipes[itemList[i].id] = itemList[i]
 					refreshRecipes()
-					return
+					return true
 				} 
 			}
-		}
-	}
-
-	function isInBounds(position,item) {
-		if(position.x >= item.x &&
-			position.x <= item.x + item.w &&
-			position.y >= item.y &&
-			position.y <= item.y + item.h) {
-			return true
 		}
 		return false
 	}
@@ -222,7 +221,7 @@
 	function searchAndAddToStorage(fromSt,toSt,amount,position) { //fromStorage, toStorage
 		for(var i in fromSt.items) {
 			if(isInBounds(position,fromSt.items[i])){
-				if(amount != 1) {
+				if(amount === 0) {
 					amount = fromSt.items[i].amount
 				}
 				toSt.addItemFromThisStorage(fromSt,fromSt.items[i],amount,SIDESIZE)
@@ -232,20 +231,6 @@
 		return false
 	}
 
-	function isClose(p1,p2) {
-		var d = Math.hypot(p2.x-p1.x, p2.y-p1.y)
-		if(d > SIDESIZE){
-			return false
-		}
-		return true
-	}
-
-    function getRandomInt(min, max) {
-	    min = Math.ceil(min);
-	    max = Math.floor(max);
-	    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-	}
-
 	var mouseDownLoc = null
 	var dragging = false //didnt implement dragging feature
 	ctx.canvas.addEventListener("mousedown", function (e) {
@@ -253,7 +238,7 @@
 	}, false)
 
 	ctx.canvas.addEventListener("mouseup", function (e) {
-		if(isClose(getMousePos(ctx.canvas, e),mouseDownLoc)){
+		if(isClose(getMousePos(ctx.canvas, e),mouseDownLoc,SIDESIZE)){
 			mouseTappedPos(getMousePos(ctx.canvas, e))
 		}
 	}, false)
@@ -270,24 +255,6 @@
 			x: mouseEvent.clientX - rect.left,
 			y: mouseEvent.clientY - rect.top
 		};
-	}
-	
-	document.onmousedown = function(event){
-		// console.log("On Moust Down")
-		// console.log(event)
-		// socket.emit('keyPress',{inputId:'attack',state:true});
-	}
-	document.onmouseup = function(event){
-		// socket.emit('keyPress',{inputId:'attack',state:false});
-	}
-	document.onmousemove = function(event){
-		// var x = -250 + event.clientX - 8;
-		// var y = -250 + event.clientY - 8;
-		// var angle = Math.atan2(y,x) / Math.PI * 180;
-	}
-	
-	document.oncontextmenu = function(event){
-		// event.preventDefault();
 	}
 	
 	

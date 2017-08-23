@@ -2,8 +2,8 @@ Item = function(param) {
 	var self = {
 		x: 0,
 		y: 0,
-        w: 60,
-        h: 60,
+        w: SIDESIZE,
+        h: SIDESIZE,
 		id: param.id,
 		name: param.name,
 		image: param.image,
