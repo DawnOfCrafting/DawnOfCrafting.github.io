@@ -1,24 +1,54 @@
-Storage = function() {
-	var self = {
-		items: {}
-	}
+Storage = function(x,y,w,h,image) {
+    var self = Entity(image,x,y,w,h)
+    self.items = {}
 
-	self.addItem = function(item) {
+	self.addItem = function(item,SIDESIZE) {
 		for(var i in self.items) {
-			if(self.items[i].id === item.id) {
+			if(self.items[i].name === item.name) {
 				self.items[i].amount += item.amount
 				return
 			}
 		}
-		self.items[item.id] = item
+        var newItem = item.reset()
+        newItem.amount = item.amount
+        newItem.x = getRandomInt(0, self.w - SIDESIZE) + self.x
+        newItem.y = getRandomInt(0, self.h - SIDESIZE) + self.y
+		self.items[newItem.id] = newItem
 	}
-
 	self.removeItem = function(item,amount) {
 		for(var i in self.items) {
-			if(self.items[i].id === item.id) {
-
+			if(self.items[i].name === item.name) {
+                self.items[i].amount -= amount
+                if(self.items[i].amount <= 0) {
+                    delete self.items[i]
+                }
+                return
 			}
 		}
 	}
+    self.addItemFromThisStorage = function(storage,item,amount,SIDESIZE) {
+        var newItem = item.reset()
+        newItem.amount = amount
+        self.addItem(newItem,SIDESIZE)
+        storage.removeItem(item,amount)
+    }
 	return self
+}
+
+Entity = function(image,x,y,w,h,title) {
+    var self = {
+        x: x,
+        y: y,
+        w: w,
+        h: h,
+        image: image,
+        title: title
+    }
+    return self
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }

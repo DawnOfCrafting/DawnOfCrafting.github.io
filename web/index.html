@@ -4,287 +4,301 @@
 	</div> -->
 </div>
 
+<style type="text/css">
+    /*.button{
+        background: url(./img/craftbutton.png) no-repeat;
+        background-size: contain;
+        cursor:pointer;
+        border: none;
+        width: 150px;
+	    height: 150px;
+	    position: absolute;
+    }*/
+</style>
+
+<!-- <div id="craftTable">
+	
+	<img id="crafttable" src="./img/crafttable.png" style="position:absolute">
+	<button id="craftbutton" type="button" class="button">Click Me!</button>
+	<button id="storage" type="button" class="button"></button>
+	<img src="./img/craftbutton.png" style="position:absolute">
+	<img src="./img/storage.png" style="position:absolute">
+</div> -->
+
 <script src="items.js"></script>
 <script src="storage.js"></script>
 
 <script>
 	//General
-	var SIDESIZE = 40;
+	var SIDESIZE = 60;
+	var PADDING = 30;
+	var canvasSize = Math.min(window.innerWidth *3/4, window.innerHeight *3/4)
+	var canvasWidth = canvasSize
+	var canvasHeight = canvasSize
+	var playerFoundRecipes = {}
 
-	//Canvas
-	var canvas = document.createElement('canvas')
-	var ctx = canvas.getContext("2d")
+	//Canvas & BG
 	var gameDiv = document.getElementById('gameDiv')
-	var canvasWidth = window.innerWidth *2/3
-	var canvasHeight = window.innerHeight *2/3
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
-    canvas.style = "border:1px solid #000000; margin:0 auto"
-    gameDiv.appendChild(canvas)
+	var Canvas = function() {
+		var canvas = document.createElement('canvas')
+		var ctx = canvas.getContext("2d")
+	    canvas.width = canvasWidth
+	    canvas.height = canvasHeight
+	    canvas.style = "position:absolute; border:1px solid #000000;top:0;left:0;"
+	    gameDiv.appendChild(canvas)
+	    return ctx
+	}
+	var ctxBg = Canvas()
+	// drawBackground(ctxBg)
+	var ctx = Canvas()
 
-    var playerStorage = Storage()
-    var wildStorage = Storage()
+	//Recipe List
+	var recipeList = document.createElement('div')
+	recipeList.style = "overflow-y: scroll;position:absolute; border:1px solid #000000;width:300;height:" + canvasHeight + ";top:0; left:" + canvasWidth
+	gameDiv.appendChild(recipeList)
 
+	var recipes = Item.getCraftableList()
+	refreshRecipes()
+
+	function refreshRecipes() {
+		while (recipeList.firstChild) {
+		    recipeList.removeChild(recipeList.firstChild);
+		}
+		var title = document.createElement('h2')
+		title.innerHTML = "Recipe List"
+		recipeList.appendChild(title)
+		
+		for(var i in recipes) {
+			var recipe = document.createElement('span')
+			if(playerFoundRecipes[recipes[i].id]) {
+				recipe.style = "color: #00ff00"
+			} else {
+				recipe.style = "color: #ff0000"	
+			}
+			recipeList.appendChild(recipe)
+			var text = ""
+			for(var k in recipes[i].inputs) {
+				if(k != 0) {
+					text += " + "
+				}
+				text += recipes[i].inputs[k].name + '(' + recipes[i].inputs[k].amount + ')'
+			}
+			text += " = "
+			text += recipes[i].name
+			recipe.innerHTML += text + '<br><br>'
+		}
+	}
+
+
+
+
+
+	
+	// Init Storagees
+	var wildStorage = Storage(
+		0,
+		0,
+		canvasWidth,
+		canvasHeight/3,
+		'./img/forest.png'
+	)
+    var playerStorage = Storage(
+    	0,
+    	canvasHeight/3,
+    	canvasWidth,
+    	canvasHeight/3,
+    	'./img/storage.png'
+    )
+    var craftTableInputStorage = Storage(
+		PADDING,
+		canvasHeight*2/3 + PADDING,
+		canvasWidth/4,
+		canvasHeight/3 - PADDING*2,
+		'./img/storage.png'
+	)
+	var craftTableOutputStorage = Storage(
+		canvasWidth/4 + PADDING * 2,
+		canvasHeight*2/3 + PADDING,
+		canvasWidth/4,
+		canvasHeight/3 - PADDING*2,
+		'./img/storage.png'
+	)
+
+    // Init Craft Table
+    var crafTableImg = new Image()
+    crafTableImg.src = './img/crafttable.png'
+    var craftButtonImg = new Image()
+    craftButtonImg.src = './img/craftbutton.png'
+
+    var craftTable = Entity(crafTableImg,0,canvasHeight*2/3,canvasWidth,canvasHeight/3)
+    var craftbutton = Entity(craftButtonImg,canvasWidth*3/4 - PADDING,canvasHeight*2/3 + PADDING,canvasWidth/4,canvasHeight/3 - PADDING * 2,'Craft')
+    // Game
     var generateCount = 0
 
     setInterval(function(){
 		ctx.clearRect(0,0,canvasWidth,canvasHeight);
+		ctxBg.clearRect(0,0,canvasWidth,canvasHeight);
 		generateRandomItem()
-		drawWildItems()
+		// drawBackground(ctxBg)
+		drawStorage(ctxBg, wildStorage)
+		drawStorage(ctxBg, playerStorage)
+		drawCraftTable(craftTable)
+		drawCraftTable(craftbutton)
+		drawStorage(ctxBg, craftTableInputStorage)
+		drawStorage(ctxBg, craftTableOutputStorage)
+		
+		// console.log("=============")
+		drawItemsInStorage(wildStorage)
+		drawItemsInStorage(playerStorage)
+		drawItemsInStorage(craftTableInputStorage)
+		drawItemsInStorage(craftTableOutputStorage)
+
 		// for(var i in Player.list)
 		// 	Player.list[i].draw();
 		// for(var i in Food.list)
 		// 	Food.list[i].draw();
 	},40);
 
-    function drawWildItems(){
-    	for(var i in wildStorage.items) {
-    		var item = wildStorage.items[i]
+    function drawCraftTable(entity) {
+	    ctxBg.drawImage(entity.image,entity.x,entity.y,entity.w,entity.h)
+	    if(entity.title) {
+		    ctxBg.fillStyle = 'black'
+			ctxBg.stroke()
+			ctxBg.font = '50px Arial';
+			ctxBg.fillText(entity.title,entity.x + PADDING/2,entity.y + entity.h/2 + PADDING/2)
+	    }
+    }
+    function drawStorage(ctx, storage) {
+    	var img = new Image()
+	    img.src = storage.image
+    	// context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+    	ctx.drawImage(img,storage.x,storage.y,storage.w,storage.h)
+    }
+    function drawItemsInStorage(storage) {
+		for(var i in storage.items) {
+    		var item = storage.items[i]
     		var image = new Image()
     		image.src = item.image
-    		ctx.drawImage(image,item.x,item.y,SIDESIZE,SIDESIZE);
-    		ctx.fillStyle = 'black';
-			ctx.fillText(item.amount,item.x,item.y);
+    		// console.log("item is " + item.name + " x: " + item.x + " amount: " + item.amount)
+    		ctx.drawImage(image,item.x,item.y,SIDESIZE,SIDESIZE)
+    		ctx.fillStyle = 'white'
+    		ctx.stroke()
+			ctx.fillText(item.amount,item.x,item.y)
     	}
-    }
-
+	}
+    
     function generateRandomItem() {
     	generateCount += 1
     	if(generateCount % 25 == 0) {
-    		var itemList = Item.getList()
+    		var itemList = Item.getGatherableList()
     		var randomItem = itemList[getRandomInt(0, itemList.length)]
-    		randomItem.x = getRandomInt(0, canvasWidth)
-    		randomItem.y = getRandomInt(0, canvasHeight/2)
-    		wildStorage.addItem(randomItem)
+    		wildStorage.addItem(randomItem, SIDESIZE)
     		generateCount = 0
     	}
     }
 
+
+    // Tap Actions
+    function mouseOnPos(position) {
+    	if(searchStorage(wildStorage,playerStorage,0,position)) { return }
+    }
+
+    function mouseTappedPos(position) {    	
+    	if(searchStorage(playerStorage,craftTableInputStorage,1,position)) { return }
+    	if(searchStorage(craftTableInputStorage, playerStorage,1,position)) { return }
+    	if(searchStorage(craftTableOutputStorage, playerStorage,0,position)) { return }
+
+		if(isInBounds(position,craftbutton)) {
+			var itemList = Item.getCraftableList() 
+			for(var i in itemList) {
+				if(itemList[i].craftThis(craftTableInputStorage, craftTableOutputStorage)) {
+					playerFoundRecipes[itemList[i].id] = itemList[i]
+					refreshRecipes()
+					return
+				} 
+			}
+		}
+	}
+
+	function isInBounds(position,item) {
+		if(position.x >= item.x &&
+			position.x <= item.x + item.w &&
+			position.y >= item.y &&
+			position.y <= item.y + item.h) {
+			return true
+		}
+		return false
+	}
+
+	function searchStorage(fromSt,toSt,amount,position) { //fromStorage, toStorage
+		for(var i in fromSt.items) {
+			if(isInBounds(position,fromSt.items[i])){
+				if(amount != 1) {
+					amount = fromSt.items[i].amount
+				}
+				toSt.addItemFromThisStorage(fromSt,fromSt.items[i],amount,SIDESIZE)
+				return true
+			}
+		}
+		return false
+	}
+
+	function isClose(p1,p2) {
+		var d = Math.hypot(p2.x-p1.x, p2.y-p1.y)
+		if(d > SIDESIZE){
+			return false
+		}
+		return true
+	}
+
     function getRandomInt(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+	    min = Math.ceil(min);
+	    max = Math.floor(max);
+	    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 	}
 
+	var mouseDownLoc = null
+	var dragging = false //didnt implement dragging feature
+	ctx.canvas.addEventListener("mousedown", function (e) {
+		mouseDownLoc = getMousePos(ctx.canvas, e)
+	}, false)
 
-	
-	//chat
-	// var chatText = document.getElementById('chat-text');
-	// var chatInput = document.getElementById('chat-input');
-	// var chatForm = document.getElementById('chat-form');
-	
-	// socket.on('addToChat',function(data){
-	// 	chatText.innerHTML += '<div>' + data + '</div>';
-	// });
-	// socket.on('evalAnswer',function(data){
-	// 	console.log(data);
-	// });
-	
-	// chatForm.onsubmit = function(e){
-	// 	e.preventDefault();
-	// 	if(chatInput.value[0] === '/')
-	// 		socket.emit('evalServer',chatInput.value.slice(1));
-	// 	else if(chatInput.value[0] === '@'){
-	// 		//@username,message
-	// 		socket.emit('sendPmToServer',{
-	// 			username:chatInput.value.slice(1,chatInput.value.indexOf(',')),
-	// 			message:chatInput.value.slice(chatInput.value.indexOf(',') + 1)
-	// 		});
-	// 	} else
-	// 		socket.emit('sendMsgToServer',chatInput.value);
-	// 	chatInput.value = '';		
-	// }
+	ctx.canvas.addEventListener("mouseup", function (e) {
+		if(isClose(getMousePos(ctx.canvas, e),mouseDownLoc)){
+			mouseTappedPos(getMousePos(ctx.canvas, e))
+		}
+	}, false)
 
-	//game
-	// var Img = {};
-	// Img.player = new Image();
-	// Img.player.src = '/client/img/player.png';
-	// Img.food = new Image();
-	// Img.food.src = '/client/img/bullet.png';
-	
-	// var ctx = document.getElementById("ctx").getContext("2d");
-	// var ctxUi = document.getElementById("ctx-ui").getContext("2d");
-	// ctxUi.font = '30px Arial';
-	
-	// var Player = function(initPack){
-	// 	var self = {};
-	// 	self.id = initPack.id;
-	// 	self.x = initPack.x;
-	// 	self.y = initPack.y;
-	// 	self.r = initPack.r
-		
-	// 	self.draw = function(){	
-	// 		var x = self.x - Player.list[selfId].x + WIDTH/2;
-	// 		var y = self.y - Player.list[selfId].y + HEIGHT/2;
+	ctx.canvas.addEventListener("mousemove", function (e) {
+		drawing = true;
+		mouseOnPos(getMousePos(ctx.canvas, e))
+	}, false)
 
-	// 		if(selfId === self.id) {
-	// 			x = WIDTH/2
-	// 			y = HEIGHT/2
-	// 		}
-	// 		ctx.beginPath();
-	// 		ctx.arc(x, y, self.r, 0, 2 * Math.PI, false); //(x,y,r,sAngle,eAngle,counterclockwise);
-	// 		ctx.fillStyle = 'green';
-	// 		ctx.fill();
-	// 		ctx.lineWidth = 2;
-	// 		ctx.strokeStyle = '#003300';
-	// 		ctx.stroke();
-
-	// 		ctx.fillStyle = 'black';
-	// 		var r = Math.round(Number(self.r))
-	// 		ctx.fillText(r,x,y-15);
-	// 	}
-	// 	Player.list[self.id] = self;
-	// 	return self;
-	// }
-	// Player.list = {};
-		
-	// var Food = function(initPack){
-	// 	var self = {};
-	// 	self.id = initPack.id;
-	// 	self.x = initPack.x;
-	// 	self.y = initPack.y;
-	// 	self.r = initPack.r;
-		
-	// 	self.draw = function(){
-	// 		var x = self.x - Player.list[selfId].x + WIDTH/2;
-	// 		var y = self.y - Player.list[selfId].y + HEIGHT/2;
-			
-	// 		ctx.beginPath();
-	// 		ctx.arc(x, y, self.r, 0, 2 * Math.PI, false);
-	// 		ctx.fillStyle = 'green';
-	// 		ctx.fill();
-	// 		ctx.lineWidth = 2;
-	// 		ctx.strokeStyle = '#003300';
-	// 		ctx.stroke();
-	// 	}
-		
-	// 	Food.list[self.id] = self;		
-	// 	return self;
-	// }
-	// Food.list = {};
-	
-	// var selfId = null;
-
-	// socket.on('init',function(data){
-	// 	// console.log('Data: ' + JSON.stringify(data))
-	// 	if(data.selfId)
-	// 		selfId = data.selfId;
-	// 	//{ player : [{id:123,number:'1',x:0,y:0},{id:1,number:'2',x:0,y:0}], bullet: []}
-	// 	for(var i = 0 ; i < data.player.length; i++){
-	// 		new Player(data.player[i]);
-	// 	}
-	// 	for(var i = 0 ; i < data.food.length; i++){
-	// 		new Food(data.food[i]);
-	// 	}
-	// });
-	
-	// socket.on('update',function(data){
-	// 	//{ player : [{id:123,x:0,y:0},{id:1,x:0,y:0}], bullet: []}
-	// 	for(var i = 0 ; i < data.player.length; i++){
-	// 		var pack = data.player[i];
-	// 		var p = Player.list[pack.id];
-	// 		if(p){
-	// 			if(pack.x !== undefined)
-	// 				p.x = pack.x;
-	// 			if(pack.y !== undefined)
-	// 				p.y = pack.y;
-	// 			if(pack.r !== undefined)
-	// 				p.r = pack.r
-	// 		}
-	// 	}
-	// 	for(var i = 0 ; i < data.food.length; i++){
-	// 		var pack = data.food[i];
-	// 		var b = Food.list[data.food[i].id];
-	// 		if(b){
-	// 			if(pack.x !== undefined)
-	// 				b.x = pack.x;
-	// 			if(pack.y !== undefined)
-	// 				b.y = pack.y;
-	// 		}
-	// 	}
-	// });
-	
-	// socket.on('remove',function(data){
-	// 	//{player:[12323],bullet:[12323,123123]}
-	// 	for(var i = 0 ; i < data.player.length; i++){
-	// 		delete Player.list[data.player[i]];
-	// 	}
-	// 	for(var i = 0 ; i < data.food.length; i++){
-	// 		delete Food.list[data.food[i]];
-	// 	}
-	// });
-	
-	// setInterval(function(){
-	// 	console.log(windowHeight)
-
-
-	// 	if(!selfId)
-	// 		return
-	// 	ctx.clearRect(0,0,500,500);
-	// 	drawGrid();
-	// 	// drawScore();
-	// 	for(var i in Player.list)
-	// 		Player.list[i].draw();
-
-	// 	console.log('FoodList: ' + JSON.stringify(Food.list.length))
-	// 	console.log('Player: ' + Player.list[selfId].x + ',' + Player.list[selfId].y)
-	// 	for(var i in Food.list)
-	// 		Food.list[i].draw();
-	// },400);
-	
-	// var drawGrid = function(){
-	// 	var player = Player.list[selfId];
-	// 	var x = WIDTH/2 - player.x;
-	// 	var y = HEIGHT/2 - player.y;
-	// 	ctx.drawImage(grid,x,y);
-	// }
-	
-	// var drawScore = function(){
-		// if(lastScore === Player.list[selfId].score)
-		// 	return;
-		// lastScore = Player.list[selfId].score;
-		// ctxUi.clearRect(0,0,500,500);
-		// ctxUi.fillStyle = 'white';
-		// ctxUi.fillText(Player.list[selfId].score,0,30);
-	// }
-	// var lastScore = null;
-	
-	document.onkeydown = function(event){
-		// if(event.keyCode === 68)	//d
-		// 	socket.emit('keyPress',{inputId:'right',state:true});
-		// else if(event.keyCode === 83)	//s
-		// 	socket.emit('keyPress',{inputId:'down',state:true});
-		// else if(event.keyCode === 65) //a
-		// 	socket.emit('keyPress',{inputId:'left',state:true});
-		// else if(event.keyCode === 87) // w
-		// 	socket.emit('keyPress',{inputId:'up',state:true});
-			
-	}
-	document.onkeyup = function(event){
-		// if(event.keyCode === 68)	//d
-		// 	socket.emit('keyPress',{inputId:'right',state:false});
-		// else if(event.keyCode === 83)	//s
-		// 	socket.emit('keyPress',{inputId:'down',state:false});
-		// else if(event.keyCode === 65) //a
-		// 	socket.emit('keyPress',{inputId:'left',state:false});
-		// else if(event.keyCode === 87) // w
-		// 	socket.emit('keyPress',{inputId:'up',state:false});
+	// Get the position of the mouse relative to the canvas
+	function getMousePos(canvasDom, mouseEvent) {
+		var rect = canvasDom.getBoundingClientRect();
+		return {
+			x: mouseEvent.clientX - rect.left,
+			y: mouseEvent.clientY - rect.top
+		};
 	}
 	
 	document.onmousedown = function(event){
+		// console.log("On Moust Down")
+		// console.log(event)
 		// socket.emit('keyPress',{inputId:'attack',state:true});
 	}
 	document.onmouseup = function(event){
 		// socket.emit('keyPress',{inputId:'attack',state:false});
 	}
 	document.onmousemove = function(event){
-		var x = -250 + event.clientX - 8;
-		var y = -250 + event.clientY - 8;
-		var angle = Math.atan2(y,x) / Math.PI * 180;
+		// var x = -250 + event.clientX - 8;
+		// var y = -250 + event.clientY - 8;
+		// var angle = Math.atan2(y,x) / Math.PI * 180;
 	}
 	
 	document.oncontextmenu = function(event){
-		event.preventDefault();
+		// event.preventDefault();
 	}
 	
 	
