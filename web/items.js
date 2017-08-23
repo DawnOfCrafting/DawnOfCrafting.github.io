@@ -62,7 +62,7 @@ Item.getGatherableList = function() {
     return list
 }
 Item.getCraftableList = function() {
-    var list = [SharpStone(), PeeledBanana(), BoneChest(), BoneHelmet(), BoneHook(), BoneNecklace(), VineRope(), CampFire(), Club(), FishingRod(), Hammer(), Knife(), Spear(), SharpBone(), SharpClub(), WoodenTable(), SlicedOrange(), PeeledOrange()]
+    var list = [SharpStone(), PeeledBanana(), SlicedOrange(), PeeledOrange(), BoneChest(), BoneHelmet(), BoneHook(), BoneNecklace(), VineRope(), CampFire(), Club(), FishingRod(), Hammer(), Knife(), Spear(), SharpBone(), SharpClub(), WoodenTable()]
     return list
 }
 
