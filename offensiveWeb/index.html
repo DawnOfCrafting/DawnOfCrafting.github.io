@@ -8,9 +8,9 @@
 
 
 <div id="gameDiv" style="width: 100%; text-align:center">
-	<a id="appstoreBadge" href="https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191">
+	<!-- <a id="appstoreBadge" href="https://itunes.apple.com/us/app/dawn-of-crafting/id1067104191">
         <img src="../img/AppstoreBadge.svg" style="width:100%">
-    </a>
+    </a> -->
 </div>
 
 <script>
@@ -134,18 +134,18 @@
 	}
 
 	//Download DoC & Video
-	var aspectRatio = 1.78
-	var vidWidth = canvasHeight/aspectRatio
-	var vidContainer = document.createElement('div')
-	vidContainer.style = "top:0;position:absolute; left: " + (canvasWidth + 300) + ";height:" + canvasHeight + ";width:" + vidWidth
-	gameDiv.appendChild(vidContainer)
-	var video = document.createElement('iframe')
-	video.src = "https://www.youtube.com/embed/MGZnoE4RRhM?ecver=2"
-	video.style = "width:100%;height:" + canvasHeight
-	vidContainer.appendChild(video)
+	// var aspectRatio = 1.78
+	// var vidWidth = canvasHeight/aspectRatio
+	// var vidContainer = document.createElement('div')
+	// vidContainer.style = "top:0;position:absolute; left: " + (canvasWidth + 300) + ";height:" + canvasHeight + ";width:" + vidWidth
+	// gameDiv.appendChild(vidContainer)
+	// var video = document.createElement('iframe')
+	// video.src = "https://www.youtube.com/embed/MGZnoE4RRhM?ecver=2"
+	// video.style = "width:100%;height:" + canvasHeight
+	// vidContainer.appendChild(video)
 
-	var appstoreBadge = document.getElementById('appstoreBadge')
-	appstoreBadge.style = "position:absolute;left:" + (canvasWidth + 300) + ";top:" + canvasHeight*1.01 + "px;width:" + vidWidth
+	// var appstoreBadge = document.getElementById('appstoreBadge')
+	// appstoreBadge.style = "position:absolute;left:" + (canvasWidth + 300) + ";top:" + canvasHeight*1.01 + "px;width:" + vidWidth
 	
 	// Init Storagees
 	var wildStorage = Storage(
