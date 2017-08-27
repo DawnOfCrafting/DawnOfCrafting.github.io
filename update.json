@@ -155,7 +155,7 @@
 		"Item": "ShinyStone",
 		"Amount": "10",
 		"Message": "Sorry for the lost items :("
-	}],	
+	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
 		"PlayerId": "04C91867-2168-4EC7-8402-DC6B5F0E7109"
@@ -300,5 +300,8 @@
 	}, {
 		"PlayerName": "Oz",
 		"PlayerId": "9982D437-2696-408A-B085-52E669E5DF07"
-	}] 
+	}, {
+		"PlayerName": "Ishtart",
+		"PlayerId": "83BAD34F-F486-472D-AE3A-609366CD8FD8"
+	}]
 }
