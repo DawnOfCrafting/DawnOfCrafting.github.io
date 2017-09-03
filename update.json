@@ -155,6 +155,13 @@
 		"Item": "ShinyStone",
 		"Amount": "10",
 		"Message": "Sorry for the lost items :("
+	}, {
+		"GiftId": "Antiliteratknifebelt",
+		"PlayerName": "Antiliterat",
+		"PlayerId": "B2B38EBA-B1A3-45BF-9573-CB22C89F0E09",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "You lose a lot of items :("
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -306,5 +313,8 @@
 	}, {
 		"PlayerName": "Blob",
 		"PlayerId": "DBC2434E-24D1-41C6-A4C9-D3FD84231B59"
+	}, {
+		"PlayerName": "Pepe",
+		"PlayerId": "C5EADB21-C8E1-44B6-8311-1903E2FB9253"
 	}]
 }
