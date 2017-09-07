@@ -162,6 +162,41 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "You lose a lot of items :("
+	}, {
+		"GiftId": "Veteranbug1",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "Coconut",
+		"Amount": "10",
+		"Message": ":("
+	}, {
+		"GiftId": "Veteranbug2",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "OpenedCoconut",
+		"Amount": "2",
+		"Message": ":("
+	}, {
+		"GiftId": "Veteranbug3",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "RawCoconut",
+		"Amount": "2",
+		"Message": ":("
+	}, {
+		"GiftId": "Veteranbug4",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "BlueBerryMash",
+		"Amount": "2",
+		"Message": ":("
+	}, {
+		"GiftId": "Veteranbug5",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "RedBerryMash",
+		"Amount": "2",
+		"Message": ":("
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
