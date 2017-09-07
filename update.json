@@ -197,6 +197,13 @@
 		"Item": "RedBerryMash",
 		"Amount": "2",
 		"Message": ":("
+	}, {
+		"GiftId": "Veteranbug6",
+		"PlayerName": "Veteran",
+		"PlayerId": "374A9013-7339-4804-AC89-F9C94E5D66A3",
+		"Item": "Banana",
+		"Amount": "50",
+		"Message": ":'("
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
