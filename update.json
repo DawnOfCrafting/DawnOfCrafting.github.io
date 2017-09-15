@@ -204,6 +204,34 @@
 		"Item": "Banana",
 		"Amount": "50",
 		"Message": ":'("
+	}, {
+		"GiftId": "DragonLordAxeBelt",
+		"PlayerName": "DragnLord",
+		"PlayerId": "BC265F24-7E3B-4132-A7CE-05BC7B54B47B",
+		"Item": "AxeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "DragonLordKnifeBelt",
+		"PlayerName": "DragnLord",
+		"PlayerId": "BC265F24-7E3B-4132-A7CE-05BC7B54B47B",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "DragonLordHammerBelt",
+		"PlayerName": "DragnLord",
+		"PlayerId": "BC265F24-7E3B-4132-A7CE-05BC7B54B47B",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "DragonLordShiny",
+		"PlayerName": "DragnLord",
+		"PlayerId": "BC265F24-7E3B-4132-A7CE-05BC7B54B47B",
+		"Item": "ShinyStone",
+		"Amount": "10",
+		"Message": "Some bonus!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
