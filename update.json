@@ -260,6 +260,27 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "Heres a new Hammer Belt!"
+	}, {
+		"GiftId": "PsinderAxeBelt",
+		"PlayerName": "Psinder",
+		"PlayerId": "D52EF5EF-7AE0-42C6-A896-5FC7D7039C25",
+		"Item": "AxeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "PsinderKnifeBelt",
+		"PlayerName": "Psinder",
+		"PlayerId": "D52EF5EF-7AE0-42C6-A896-5FC7D7039C25",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "PsinderHammerBelt",
+		"PlayerName": "Psinder",
+		"PlayerId": "D52EF5EF-7AE0-42C6-A896-5FC7D7039C25",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -429,5 +450,8 @@
 	}, {
 		"PlayerName": "Daddyderic",
 		"PlayerId": "9FC6BA1B-1FBF-4364-9A2F-0465010285CF"
+	}, {
+		"PlayerName": "Hehcdhi",
+		"PlayerId": "58221EE8-16A6-48BA-BA43-94A92BD4EB94"
 	}]
 }
