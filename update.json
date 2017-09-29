@@ -239,6 +239,27 @@
 		"Item": "GrandmasMediumContainer",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "BeckyHammerBelt",
+		"PlayerName": "Becky",
+		"PlayerId": "52B35EAC-635C-45DC-8493-15A8202E8298",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Heres a new Hammer Belt!"
+	}, {
+		"GiftId": "MKnifeBelt",
+		"PlayerName": "M",
+		"PlayerId": "F82F75F5-C6C4-4C07-820A-3277DB7F61A6",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Heres a new Knife Belt!"
+	}, {
+		"GiftId": "MHammerBelt",
+		"PlayerName": "M",
+		"PlayerId": "F82F75F5-C6C4-4C07-820A-3277DB7F61A6",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Heres a new Hammer Belt!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -402,5 +423,11 @@
 	}, {
 		"PlayerName": "mcmc",
 		"PlayerId": "025E766A-775A-40D4-8BE9-A41FF997ADDA"
+	}, {
+		"PlayerName": "Nick",
+		"PlayerId": "55729EB1-4C13-491F-9BD4-03C22EC5F041"
+	}, {
+		"PlayerName": "Daddyderic",
+		"PlayerId": "9FC6BA1B-1FBF-4364-9A2F-0465010285CF"
 	}]
 }
