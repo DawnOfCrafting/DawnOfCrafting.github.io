@@ -281,6 +281,13 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "JayMinus250Gloves",
+		"PlayerName": "Jay",
+		"PlayerId": "0AC0E969-B33F-4F00-BB38-E192F77D51A8",
+		"Item": "CraftersGloveM20",
+		"Amount": "1",
+		"Message": "Sorry for the lost gloves!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -477,7 +484,14 @@
 	}, {
 		"PlayerName": "Kissinger",
 		"PlayerId": "178FC45D-02A8-4977-8FBF-83FE0A3B3B96"
+	}, {
+		"PlayerName": "TheXMan13",
+		"PlayerId": "41E03379-E6E3-4ECD-8AFF-06C7B89E9D11"
+	}, {
+		"PlayerName": "Math",
+		"PlayerId": "C044E1D9-C95C-4F5C-959D-0B713AD4EA7B"
+	}, {
+		"PlayerName": "LoVeNooB",
+		"PlayerId": "FD7CE2B2-D294-4C97-AB4B-8400DD75AA29"
 	}]
 }
-
- 
