@@ -288,6 +288,76 @@
 		"Item": "CraftersGloveM20",
 		"Amount": "1",
 		"Message": "Sorry for the lost gloves!"
+	}, {
+		"GiftId": "Jay20Gloves",
+		"PlayerName": "Jay",
+		"PlayerId": "0AC0E969-B33F-4F00-BB38-E192F77D51A8",
+		"Item": "CraftersGlove20",
+		"Amount": "1",
+		"Message": "Try not to lose them again ^^"
+	}, {
+		"GiftId": "Flygranmas",
+		"PlayerName": "Fly",
+		"PlayerId": "6214222B-AC23-4FAB-A809-AA6ED2C31C1C",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Sorry for the lost container!"
+	}, {
+		"GiftId": "Billyblumcontainer",
+		"PlayerName": "Billyblum",
+		"PlayerId": "841693E6-A5FF-4C16-BF3C-4318AB79A024",
+		"Item": "LargeContainer",
+		"Amount": "1",
+		"Message": "Here you go, a new container Steve :)"
+	}, {
+		"GiftId": "Xaeyr1",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "CraftersGloveM20",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "Xaeyr2",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "CraftersGlove30",
+		"Amount": "1",
+		"Message": "Here you go, more of your old stuff"
+	}, {
+		"GiftId": "Xaeyr3",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "CraftersBook3",
+		"Amount": "1",
+		"Message": "Here you go, more more of your old stuff"
+	}, {
+		"GiftId": "Xaeyr4",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "CraftersApron300",
+		"Amount": "1",
+		"Message": "You left a shit ton of stuff behind"
+	}, {
+		"GiftId": "Xaeyr5",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Its just gonna continue like this"
+	}, {
+		"GiftId": "Xaeyr6",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "AxeBelt10k",
+		"Amount": "1",
+		"Message": "Its just gonna continue like this"
+	}, {
+		"GiftId": "Xaeyr7",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "EAE2F588-E981-4F2A-B142-07E23B678417",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "I think this is the end"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -493,5 +563,8 @@
 	}, {
 		"PlayerName": "LoVeNooB",
 		"PlayerId": "FD7CE2B2-D294-4C97-AB4B-8400DD75AA29"
+	}, {
+		"PlayerName": "Dave XVI",
+		"PlayerId": "EF6EA3E6-2CD7-4CDA-B456-A7F162F43A6A"
 	}]
 }
