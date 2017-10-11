@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warlock</title>
+
+</head>
+<body style="margin:0px">
+<canvas id="warlockCanvas" width="640" height="640"></canvas>
+<script>
+    let myCanvas = document.getElementById("warlockCanvas");
+    let ctx = myCanvas.getContext("2d");
+    let timeWhenGameStarted = Date.now();	//return time in ms
+
+    let WIDTH = 640;
+    let HEIGHT = 640;
+    let warlockX = WIDTH / 2;
+    let warlockY = HEIGHT / 2;
+    let movementSpeed = 4;
+    let fireBallmovementSpeed = movementSpeed * 2;
+    let knockBackSpeed = fireBallmovementSpeed * 2;
+    let knockBackSpeedX = 0;
+    let knockBackSpeedY = 0;
+    let knockBackRadius = 30;
+    let knockBackSlowAmount = 0.25;
+    let knockBackDamage = 10;
+    let lastMouseClickX = 0;
+    let lastMouseClickY = 0;
+    let aimAngle = 0;
+    let pathFindingLocationX = 0;
+    let pathFindingLocationY = 0;
+    let lastFireBallShotTimeFromPlayer = 0;
+    let lastFireBallShotTimeFromPillar = 0;
+    let playerFireBallCooldown = 1000; //ms
+    let pillarFireBallCooldown = 3000; //ms
+    let fireBallArray = [];
+    let warlockHP = 100;
+    let warlockMaxHP = 100;
+    let lavaDPS = 1;
+    let fireBallDamage = 20;
+    let playerFireBallSound = new sound("https://raw.githubusercontent.com/goktugyil/JustTests/master/fb.mp3");
+    let fireBallSound = new sound("https://raw.githubusercontent.com/goktugyil/JustTests/master/fb.mp3");
+    let explosionSound = new sound("https://raw.githubusercontent.com/goktugyil/JustTests/master/exp.mp3");
+
+    function sound(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function(){
+            this.sound.play();
+        };
+        this.stop = function(){
+            this.sound.pause();
+        };
+    }
+
+    function resizeCanvas() {
+        WIDTH = window.innerWidth;
+        HEIGHT = window.innerHeight;
+        myCanvas.width = WIDTH;
+        myCanvas.height = HEIGHT;
+        warlockX = WIDTH / 2;
+        warlockY = HEIGHT / 2;
+    }
+
+    function updateScreen() {
+        ctx.clearRect(0,0,WIDTH,HEIGHT);
+
+        document.body.style.overflow = 'hidden'; // Hides scroll bar
+        drawLava();
+        drawGround();
+        calculateWarlockMovement();
+        drawWarlock();
+        drawFireBall();
+        drawPillar();
+        shootFireBallFromPillar();
+        updateFireBalls();
+    }
+
+    function drawLava() {
+        ctx.fillStyle = '#CF1020';
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+    }
+
+    function drawGround() {
+        ctx.save();
+        let centerX = WIDTH / 2;
+        let centerY = HEIGHT / 2;
+        let radius = 350;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'silver';
+        ctx.fill();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'gray';
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    function calculateWarlockMovement() {
+        if (inputManager.pressingRight || inputManager.pressingLeft || inputManager.pressingDown || inputManager.pressingUp) {
+            pathFindingLocationX = 0;
+            pathFindingLocationY = 0;
+        }
+
+        if(knockBackSpeedX != 0) {
+            warlockX += knockBackSpeedX;
+            if(Math.abs(knockBackSpeedX) < knockBackSlowAmount) {
+                knockBackSpeedX = 0;
+            }
+            if(knockBackSpeedX > 0) {
+                knockBackSpeedX -= knockBackSlowAmount;
+            } else {
+                knockBackSpeedX += knockBackSlowAmount;
+            }
+        }
+        if(knockBackSpeedY != 0) {
+            warlockY += knockBackSpeedY;
+            if(Math.abs(knockBackSpeedY) < knockBackSlowAmount) {
+                knockBackSpeedY = 0;
+            }
+            if(knockBackSpeedY > 0) {
+                knockBackSpeedY -= knockBackSlowAmount;
+            } else {
+                knockBackSpeedY += knockBackSlowAmount;
+            }
+        }
+
+        if (inputManager.pressingRight) {
+            if (!checkPillarsForCollision(warlockX + movementSpeed, warlockY)) {
+                warlockX += movementSpeed;
+            }
+        }
+        if (inputManager.pressingLeft) {
+            if (!checkPillarsForCollision(warlockX - movementSpeed, warlockY)) {
+                warlockX -= movementSpeed;
+            }
+        }
+        if (inputManager.pressingDown) {
+            if (!checkPillarsForCollision(warlockX, warlockY + movementSpeed)) {
+                warlockY += movementSpeed;
+            }
+        }
+        if (inputManager.pressingUp) {
+            if (!checkPillarsForCollision(warlockX, warlockY - movementSpeed)) {
+                warlockY -= movementSpeed;
+            }
+        }
+        if (inputManager.pressingMouseRight) {
+            pathFindingLocationX = lastMouseClickX;
+            pathFindingLocationY = lastMouseClickY;
+        }
+        if (pathFindingLocationX != 0 && pathFindingLocationY != 0) {
+            let positionX = pathFindingLocationX - warlockX;
+            if (Math.abs(positionX) > movementSpeed) {
+                if (positionX > 0) {
+                    if (!checkPillarsForCollision(warlockX + movementSpeed, warlockY)) {
+                        warlockX += movementSpeed;
+                    }
+                } else {
+                    if (!checkPillarsForCollision(warlockX - movementSpeed, warlockY)) {
+                        warlockX -= movementSpeed;
+                    }
+                }
+            }
+
+            let positionY = pathFindingLocationY - warlockY;
+            if (Math.abs(positionY) > movementSpeed) {
+                if (positionY > 0) {
+                    if (!checkPillarsForCollision(warlockX, warlockY + movementSpeed)) {
+                        warlockY += movementSpeed;
+                    }
+                } else {
+                    if (!checkPillarsForCollision(warlockX, warlockY - movementSpeed)) {
+                        warlockY -= movementSpeed;
+                    }
+                }
+            }
+//            var angleX = lastMouseClickX - myCanvas.getBoundingClientRect().left;
+//            var angleY = lastMouseClickY - myCanvas.getBoundingClientRect().top;
+//            angleX -= WIDTH/2;
+//            angleY -= HEIGHT/2;
+//            let aimAngle = Math.atan2(angleY, angleX) / Math.PI * 180;
+//
+//            let spdX = Math.cos(aimAngle/180*Math.PI)*movementSpeed;
+//            let spdY = Math.sin(aimAngle/180*Math.PI)*movementSpeed;
+//            warlockX += spdX;
+//            warlockY += spdY;
+        }
+
+
+        if (inputManager.pressingMouseLeft) {
+            if (Date.now() > lastFireBallShotTimeFromPlayer + playerFireBallCooldown ) {
+                lastFireBallShotTimeFromPlayer = Date.now();
+                var angleX = lastMouseClickX - myCanvas.getBoundingClientRect().left;
+                var angleY = lastMouseClickY - myCanvas.getBoundingClientRect().top;
+                angleX -= WIDTH/2;
+                angleY -= HEIGHT/2;
+                console.debug(angleX);
+                console.debug(angleY);
+                let aimAngle = Math.atan2(angleY, angleX) / Math.PI * 180;
+                new FireBall(warlockX, warlockY, aimAngle, false, false, true);
+            }
+        }
+        checkForLavaCollision()
+    }
+
+    function circleCollision(x1, y1, r1, x2, y2, r2) {
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        let tr = r1 + r2;
+
+        if((dx*dx) + (dy*dy) < tr*tr) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkPillarsForCollision(newWarlockX, newWarlockY) {
+        let pillar1X = WIDTH / 3 + 450;
+        let pillar1Y = HEIGHT / 3;
+        let pillarRadius = 70;
+        let pillar2X = WIDTH / 3 + 50;
+        let pillar2Y = HEIGHT / 3 + 300;
+        let warlockRadius = 50;
+
+        let pillar1Collision = circleCollision(newWarlockX, newWarlockY, warlockRadius, pillar1X, pillar1Y, pillarRadius);
+        let pillar2Collision = circleCollision(newWarlockX, newWarlockY, warlockRadius, pillar2X, pillar2Y, pillarRadius);
+
+        if (pillar1Collision || pillar2Collision) {
+            return true
+        }
+        return false
+    }
+
+    function checkForFireBallAndPillarCollision(fireBallX, fireBallY, excludePillar2) {
+        let pillar1X = WIDTH / 3 + 450;
+        let pillar1Y = HEIGHT / 3;
+        let pillarRadius = 70;
+        let pillar2X = WIDTH / 3 + 50;
+        let pillar2Y = HEIGHT / 3 + 300;
+        let fireBallRadius = 30;
+
+        let pillar1Collision = circleCollision(fireBallX, fireBallY, fireBallRadius, pillar1X, pillar1Y, pillarRadius);
+        let pillar2Collision;
+        if (!excludePillar2) {
+            pillar2Collision = circleCollision(fireBallX, fireBallY, fireBallRadius, pillar2X, pillar2Y, pillarRadius);
+        }
+        if (pillar1Collision || pillar2Collision) {
+            return true
+        }
+        return false
+    }
+
+    function checkForLavaCollision() {
+        let centerX = WIDTH / 2;
+        let centerY = HEIGHT / 2;
+        let radius = 350;
+        let warlockRadius = 50;
+        let res = circleCollision(warlockX, warlockY, warlockRadius, centerX, centerY, radius);
+        if (!res) {
+            reduceWarlockHP(lavaDPS);
+        }
+    }
+
+    function reduceWarlockHP(damage) {
+        warlockHP -= damage;
+        if (warlockHP < 0) {
+            warlockHP = 0;
+        }
+    }
+
+    function drawWarlock() {
+        ctx.save();
+        let centerX = warlockX;
+        let centerY = warlockY;
+        let radius = 50;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#42f4e5';
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#f4a641';
+        ctx.stroke();
+        ctx.restore();
+
+        //Draw HP Bar
+        ctx.save();
+        let HPBarWidth = 100*warlockHP/warlockMaxHP;
+        let HPBarHeight = 20;
+        let HPBarX = centerX - 50;
+        let HPBarY = centerY - radius * 1.5;
+        ctx.fillStyle = 'green';
+        ctx.fillRect(HPBarX, HPBarY, HPBarWidth, HPBarHeight);
+        ctx.strokeStyle = 'black';
+        ctx.strokeRect(HPBarX, HPBarY, 100, HPBarHeight);
+        ctx.restore();
+    }
+
+    function drawFireBall(x, y, miniFireBall) {
+        ctx.save();
+        let radius;
+        if(miniFireBall) {
+            radius = 10;
+        } else {
+            radius = 30;
+        }
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#ff4444';
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    function shootFireBallFromPillar() {
+        if (Date.now() > lastFireBallShotTimeFromPillar + pillarFireBallCooldown) {
+            lastFireBallShotTimeFromPillar = Date.now();
+            let center2X = WIDTH / 3 + 50;
+            let center2Y = HEIGHT / 3 + 300;
+            new FireBall(center2X, center2Y, -90, true);
+        }
+    }
+
+    function updateFireBalls() {
+        for (let [index, fb] of fireBallArray.entries()) {
+            if (fb !== undefined) {
+                fb.update(index);
+            }
+        }
+    }
+
+    function drawPillar() {
+        ctx.save();
+        let centerX = WIDTH / 3 + 450;
+        let centerY = HEIGHT / 3;
+        let radius = 70;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#474747';
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#0d0606';
+        ctx.stroke();
+
+        let center2X = WIDTH / 3 + 50;
+        let center2Y = HEIGHT / 3 + 300;
+        ctx.beginPath();
+        ctx.arc(center2X, center2Y, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#474747';
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#0d0606';
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    document.onmousedown = function(mouse){
+        lastMouseClickX = mouse.x;
+        lastMouseClickY = mouse.y;
+        aimAngle = Math.atan2(lastMouseClickY,lastMouseClickX) / Math.PI * 180;
+        if(mouse.which === 1)
+            inputManager.pressingMouseLeft = true;
+        else
+            inputManager.pressingMouseRight = true;
+    };
+    document.onmouseup = function(mouse){
+        if(mouse.which === 1)
+            inputManager.pressingMouseLeft = false;
+        else
+            inputManager.pressingMouseRight = false;
+    };
+    document.oncontextmenu = function(mouse){
+        mouse.preventDefault();
+    };
+
+    document.onkeydown = function(event){
+        if(event.keyCode === 68)	//d
+            inputManager.pressingRight = true;
+        else if(event.keyCode === 83)	//s
+            inputManager.pressingDown = true;
+        else if(event.keyCode === 65) //a
+            inputManager.pressingLeft = true;
+        else if(event.keyCode === 87) // w
+            inputManager.pressingUp = true;
+    };
+
+    document.onkeyup = function(event){
+        if(event.keyCode === 68)	//d
+            inputManager.pressingRight = false;
+        else if(event.keyCode === 83)	//s
+            inputManager.pressingDown = false;
+        else if(event.keyCode === 65) //a
+            inputManager.pressingLeft = false;
+        else if(event.keyCode === 87) // w
+            inputManager.pressingUp = false;
+    };
+
+
+    class InputManager {
+        constructor() {
+            this.pressingRight = false;
+            this.pressingLeft = false;
+            this.pressingUp = false;
+            this.pressingDown = false;
+            this.aimAngle = 0;
+            this.pressingMouseRight = false;
+            this.pressingMouseLeft = false;
+        }
+    }
+
+    let inputManager = new InputManager();
+
+    class FireBall {
+        constructor(fromX, fromY, aimAngle, fromPillar, miniFireBall, fromPlayer) {
+            this.lastX = fromX;
+            this.lastY = fromY;
+            this.aimAngle = aimAngle;
+            this.time = 0;
+            this.dying = 0;
+            this.fromPillar = fromPillar;
+            this.fromPlayer = fromPlayer;
+            this.miniFireBall = miniFireBall;
+            this.damagePlayerOnDeath = false;
+            fireBallArray.push(this);
+            if(fromPlayer) {
+                playerFireBallSound.play();
+            } else {
+                fireBallSound.play();
+            }
+        }
+        update(index) {
+            let spdX = Math.cos(this.aimAngle/180*Math.PI)*fireBallmovementSpeed;
+            let spdY = Math.sin(this.aimAngle/180*Math.PI)*fireBallmovementSpeed;
+            this.lastX += spdX;
+            this.lastY += spdY;
+            drawFireBall(this.lastX, this.lastY, this.miniFireBall);
+            this.time++;
+            if((this.miniFireBall && this.time > 10) || this.time > 100) {
+                delete fireBallArray[index];
+            }
+
+            if(!this.miniFireBall) {
+                if(checkForFireBallAndPillarCollision(this.lastX, this.lastY, this.fromPillar)) {
+                    this.dying++;
+                }
+                //Fireball - Warlock collision
+                if(!this.fromPlayer && circleCollision(this.lastX, this.lastY, 30, warlockX, warlockY, 50)) {
+                    this.dying++;
+                    this.damagePlayerOnDeath = true;
+                }
+                //Fireball - Fireball collision
+                for(let [fbIndex, fb] of fireBallArray.entries()) {
+                    if (fb != undefined && fbIndex != index) {
+                        if(!fb.miniFireBall) {
+                            if(circleCollision(this.lastX, this.lastY, 30, fb.lastX, fb.lastY, 30)) {
+                                this.dying++;
+                                fb.update(fbIndex);
+                            }
+                        }
+                    }
+                }
+                if(this.dying>5) {
+                    this.explode(index);
+                }
+            }
+        }
+        explode(index) {
+            new FireBall(this.lastX, this.lastY, 45, false, true);
+            new FireBall(this.lastX, this.lastY, 90, false, true);
+            new FireBall(this.lastX, this.lastY, 135, false, true);
+            new FireBall(this.lastX, this.lastY, 180, false, true);
+            new FireBall(this.lastX, this.lastY, 225, false, true);
+            new FireBall(this.lastX, this.lastY, 270, false, true);
+            new FireBall(this.lastX, this.lastY, 315, false, true);
+            new FireBall(this.lastX, this.lastY, 360, false, true);
+            if(this.damagePlayerOnDeath) {
+                reduceWarlockHP(fireBallDamage);
+            }
+            delete fireBallArray[index];
+            this.knockback();
+            explosionSound.play();
+        }
+        knockback() {
+            if(circleCollision(this.lastX, this.lastY, 30 + knockBackRadius, warlockX, warlockY, 50)) {
+                let newX = warlockX - this.lastX;
+                let newY = warlockY - this.lastY;
+                let xy = Math.sqrt(Math.pow(newX, 2) + Math.pow(newY, 2));
+                let magnitudeX = newX/xy;
+                let magnitudeY = newY/xy;
+                knockBackSpeedX = magnitudeX * knockBackSpeed;
+                knockBackSpeedY = magnitudeY * knockBackSpeed;
+                reduceWarlockHP(knockBackDamage);
+            }
+        }
+    }
+
+    window.addEventListener('resize',function () {
+        resizeCanvas();
+        updateScreen();
+    });
+
+    resizeCanvas();
+    updateScreen();
+    setInterval(updateScreen,40);
+</script>
+</body>
+</html>
