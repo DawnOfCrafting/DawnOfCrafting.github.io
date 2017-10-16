@@ -358,6 +358,27 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "I think this is the end"
+	}, {
+		"GiftId": "Deus1",
+		"PlayerName": "Deus",
+		"PlayerId": "EE80B896-3E0F-4BC8-849B-A67244AE5974",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "Deus2",
+		"PlayerName": "Deus",
+		"PlayerId": "EE80B896-3E0F-4BC8-849B-A67244AE5974",
+		"Item": "CraftersApron100",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "Deus2",
+		"PlayerName": "Deus",
+		"PlayerId": "EE80B896-3E0F-4BC8-849B-A67244AE5974",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -574,4 +595,3 @@
 		"PlayerId": "E1E7356D-1DD8-4068-9FE5-E7AC53753E99"
 	}]
 }
-  
