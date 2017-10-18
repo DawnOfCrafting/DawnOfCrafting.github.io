@@ -379,6 +379,13 @@
 		"Item": "CraftersBook1",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Lye2",
+		"PlayerName": "Lye",
+		"PlayerId": "6214222B-AC23-4FAB-A809-AA6ED2C31C1C",
+		"Item": "AxeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
