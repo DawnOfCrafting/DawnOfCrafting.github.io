@@ -386,6 +386,13 @@
 		"Item": "AxeBelt10k",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "CrawlerKnifeBelt",
+		"PlayerName": "Crawler",
+		"PlayerId": "EAFFEFBF-49E0-4A5E-BEEA-AE862CF5F80C",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
