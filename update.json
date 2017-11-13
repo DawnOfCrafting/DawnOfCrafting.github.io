@@ -401,12 +401,12 @@
 		"Amount": "1",
 		"Message": "Here you go!"
 	}, {
-		"GiftId": "TestingTest",
+		"GiftId": "TestingTest2",
 		"PlayerName": "Testing",
 		"PlayerId": "A25DD713-FB23-45E9-A25A-C09695D3F919",
-		"Item": "Banana",
-		"Amount": "1",
-		"Message": "Here you go!"
+		"Item": "ShinyStone",
+		"Amount": "2",
+		"Message": "Thanks for visiting us Rick. I heard you were a good crafter. Here are 2 Shiny Stones, I think you call them isotope 322. Make a portal gun with them please."
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
