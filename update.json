@@ -407,6 +407,20 @@
 		"Item": "ShinyStone",
 		"Amount": "2",
 		"Message": "Thanks for visiting us Rick. I heard you were a good crafter. Here are 2 Shiny Stones, I think you call them isotope 322. Make a portal gun with them please."
+	}, {
+		"GiftId": "dan1",
+		"PlayerName": "dan",
+		"PlayerId": "5A541FF5-92F3-42F0-8B41-5CD8B534913C",
+		"Item": "ShinyStone",
+		"Amount": "2",
+		"Message": "Thanks for visiting us Rick. I heard you were a good crafter. Here are 2 Shiny Stones, I think you call them isotope 322 or something. Make a portal gun with them please."
+	}, {
+		"GiftId": "dan2",
+		"PlayerName": "dan",
+		"PlayerId": "5A541FF5-92F3-42F0-8B41-5CD8B534913C",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Thanks for squanching our favorite squanch. Take this squanch, you can put your squanches in it."
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
