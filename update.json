@@ -421,6 +421,13 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "Thanks for squanching our favorite squanch. Take this squanch, you can put your squanches in it."
+	}, {
+		"GiftId": "CrawlerKnifeBelt2",
+		"PlayerName": "Crawler",
+		"PlayerId": "EAFFEFBF-49E0-4A5E-BEEA-AE862CF5F80C",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -638,5 +645,8 @@
 	}, {
 		"PlayerName": "Wildhero",
 		"PlayerId": "841EFB7A-CBD5-4F68-A925-DAFF04F15F96"
+	}, {
+		"PlayerName": "El Zoof",
+		"PlayerId": "4ED21926-2573-44A4-B3BF-4F104B186DC8"
 	}]
 }
