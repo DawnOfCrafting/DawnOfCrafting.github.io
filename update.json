@@ -400,6 +400,34 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "TestingTest2",
+		"PlayerName": "Testing",
+		"PlayerId": "A25DD713-FB23-45E9-A25A-C09695D3F919",
+		"Item": "ShinyStone",
+		"Amount": "2",
+		"Message": "Thanks for visiting us Rick. I heard you were a good crafter. Here are 2 Shiny Stones, I think you call them isotope 322. Make a portal gun with them please."
+	}, {
+		"GiftId": "dan1",
+		"PlayerName": "dan",
+		"PlayerId": "5A541FF5-92F3-42F0-8B41-5CD8B534913C",
+		"Item": "ShinyStone",
+		"Amount": "2",
+		"Message": "Thanks for visiting us Rick. I heard you were a good crafter. Here are 2 Shiny Stones, I think you call them isotope 322 or something. Make a portal gun with them please."
+	}, {
+		"GiftId": "dan2",
+		"PlayerName": "dan",
+		"PlayerId": "5A541FF5-92F3-42F0-8B41-5CD8B534913C",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Thanks for squanching our favorite squanch. Take this squanch, you can put your squanches in it."
+	}, {
+		"GiftId": "CrawlerKnifeBelt2",
+		"PlayerName": "Crawler",
+		"PlayerId": "EAFFEFBF-49E0-4A5E-BEEA-AE862CF5F80C",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -617,5 +645,14 @@
 	}, {
 		"PlayerName": "Wildhero",
 		"PlayerId": "841EFB7A-CBD5-4F68-A925-DAFF04F15F96"
+	}, {
+		"PlayerName": "El Zoof",
+		"PlayerId": "4ED21926-2573-44A4-B3BF-4F104B186DC8"
+	}, {
+		"PlayerName": "Bettymage",
+		"PlayerId": "D3A0A041-C766-4F8C-8C2C-A248E1D8F3A8"
+	}, {
+		"PlayerName": "Ferrous Jr.",
+		"PlayerId": "931147B1-3EC0-4615-AB7E-F086F947468A"
 	}]
 }
