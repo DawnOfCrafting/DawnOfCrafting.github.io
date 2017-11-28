@@ -428,6 +428,13 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Tempest8knifebelt",
+		"PlayerName": "Tempest8",
+		"PlayerId": "C1CDC8C1-D809-4539-8A0F-4466452066EE",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -654,5 +661,8 @@
 	}, {
 		"PlayerName": "Ferrous Jr.",
 		"PlayerId": "931147B1-3EC0-4615-AB7E-F086F947468A"
+	}, {
+		"PlayerName": "Bagel",
+		"PlayerId": "AD448FC5-4ACD-465D-9DA7-C4376C2D9980"
 	}]
 }
