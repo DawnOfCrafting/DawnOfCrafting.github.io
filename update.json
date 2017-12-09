@@ -435,6 +435,13 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Blaidd",
+		"PlayerName": "Blaidd",
+		"PlayerId": "32D65F40-5EF7-43CF-B1B5-280444695EF3",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "here you go"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -676,5 +683,5 @@
 	}, {
 		"PlayerName": "Filthsen",
 		"PlayerId": "9EAADF35-FD0E-43AA-89DF-55AD5FDE9933"
-	}]	
+	}]
 }
