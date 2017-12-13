@@ -442,6 +442,27 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "here you go"
+	}, {
+		"GiftId": "Taylor1",
+		"PlayerName": "Taylor",
+		"PlayerId": "F3F1251F-57F5-4663-B664-46A9CF1EF3C4",
+		"Item": "CraftersGloveM15",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "Taylor2",
+		"PlayerName": "Taylor",
+		"PlayerId": "F3F1251F-57F5-4663-B664-46A9CF1EF3C4",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Here you go, more of your old stuff"
+	}, {
+		"GiftId": "Taylor3",
+		"PlayerName": "Taylor",
+		"PlayerId": "F3F1251F-57F5-4663-B664-46A9CF1EF3C4",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "Couldnt increase hp of player/minion so take this instead"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -689,5 +710,8 @@
 	}, {
 		"PlayerName": "Bear",
 		"PlayerId": "2066D426-9A4F-4E00-B7F6-D48B6268DA61"
+	}, {
+		"PlayerName": "Andrew",
+		"PlayerId": "F1D4C06D-6590-4DD0-AA92-D9E3F0B80339"
 	}]
 }
