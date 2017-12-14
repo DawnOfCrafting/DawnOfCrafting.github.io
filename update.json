@@ -463,6 +463,13 @@
 		"Item": "CraftersBook1",
 		"Amount": "1",
 		"Message": "Couldnt increase hp of player/minion so take this instead"
+	}, {
+		"GiftId": "Auditorbelt",
+		"PlayerName": "Auditor",
+		"PlayerId": "04A53599-C1DC-4850-A283-D510FF9A2C40",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "here you go"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -713,5 +720,14 @@
 	}, {
 		"PlayerName": "Andrew",
 		"PlayerId": "F1D4C06D-6590-4DD0-AA92-D9E3F0B80339"
+	}, {
+		"PlayerName": "Moose",
+		"PlayerId": "C28D5D50-0C64-4BDC-8CB5-CE5C90232B0A"
+	}, {
+		"PlayerName": "Deus",
+		"PlayerId": "CC7CD941-704B-4259-80BD-7DA4FC390FCE"
+	}, {
+		"PlayerName": "Auditor",
+		"PlayerId": "04A53599-C1DC-4850-A283-D510FF9A2C40"
 	}]
 }
