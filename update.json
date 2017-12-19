@@ -470,6 +470,83 @@
 		"Item": "HammerBelt10k",
 		"Amount": "1",
 		"Message": "here you go"
+	}, {
+		"GiftId": "XaeyrNew1",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersGloveM30",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew2",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersGloveM20",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew3",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersGloveM10",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew4",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersGlove40",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew5",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersApron300",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew6",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "CraftersBook4",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew7",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew8",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew9",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew10",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "XaeyrNew11",
+		"PlayerName": "Xaeyr",
+		"PlayerId": "723F8B21-0E60-4EB5-9607-60226DF7045D",
+		"Item": "GrandmasLargeContainer",
+		"Amount": "1",
+		"Message": "Here you go, your old stuff"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
@@ -744,5 +821,14 @@
 	}, {
 		"PlayerName": "ZeroSoul",
 		"PlayerId": "90EE5864-8C79-4DC2-AF6D-FAEDB82F98DC"
+	}, {
+		"PlayerName": "Bird",
+		"PlayerId": "36A47626-9561-4FFB-B1CB-4D8B618FC060"
+	}, {
+		"PlayerName": "Jonathan",
+		"PlayerId": "6649C903-6912-4A14-86FC-5E3193118E0F"
+	}, {
+		"PlayerName": "Simon",
+		"PlayerId": "81A70984-9A34-4406-BA09-4A6E81B2E57B"
 	}]
 }
