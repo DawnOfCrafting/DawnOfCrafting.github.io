@@ -830,5 +830,23 @@
 	}, {
 		"PlayerName": "Simon",
 		"PlayerId": "81A70984-9A34-4406-BA09-4A6E81B2E57B"
+	}, {
+		"PlayerName": "Skissor",
+		"PlayerId": "A01C7E19-1A35-4220-8D33-8D2E9231D74A"
+	}, {
+		"PlayerName": "Meryl",
+		"PlayerId": "C73E7145-6C17-429B-AA4F-4DD3374353E5"
+	}, {
+		"PlayerName": "Da Vinci",
+		"PlayerId": "5EC8DF1A-4C84-41FC-91FB-880EB820787C"
+	}, {
+		"PlayerName": "Keewi",
+		"PlayerId": "61251C3D-ED9E-4F55-9269-200DAA2E2757 "
+	}, {
+		"PlayerName": "Ralf",
+		"PlayerId": "5BFFF5E2-A8DF-415C-A9D2-D4E445C10373"
+	}, {
+		"PlayerName": "Skrypt",
+		"PlayerId": "62C0F0F5-3A79-4D4C-919B-0FA22037899E"
 	}]
 }
