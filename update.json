@@ -547,6 +547,41 @@
 		"Item": "GrandmasLargeContainer",
 		"Amount": "1",
 		"Message": "Here you go, your old stuff"
+	}, {
+		"GiftId": "Erolfood",
+		"PlayerName": "Erol der 5.",
+		"PlayerId": "181771C0-C7C3-4755-BE4D-361DAD1FF302",
+		"Item": "RawCoconut",
+		"Amount": "100",
+		"Message": "Some food to help you out"
+	}, {
+		"GiftId": "Penguin1",
+		"PlayerName": "Penguin",
+		"PlayerId": "2AD8A287-A0A8-41BE-8EFC-9F47624C135A",
+		"Item": "CraftersApron100",
+		"Amount": "1",
+		"Message": "Here you go, your old items"
+	}, {
+		"GiftId": "Penguin2",
+		"PlayerName": "Penguin",
+		"PlayerId": "2AD8A287-A0A8-41BE-8EFC-9F47624C135A",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "Here you go, your old items"
+	}, {
+		"GiftId": "Penguin3",
+		"PlayerName": "Penguin",
+		"PlayerId": "2AD8A287-A0A8-41BE-8EFC-9F47624C135A",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Here you go, your old items"
+	}, {
+		"GiftId": "Penguin4",
+		"PlayerName": "Penguin",
+		"PlayerId": "2AD8A287-A0A8-41BE-8EFC-9F47624C135A",
+		"Item": "CraftersGloveM10",
+		"Amount": "1",
+		"Message": "Heres a little gift :)"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
