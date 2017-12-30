@@ -582,6 +582,27 @@
 		"Item": "CraftersGloveM10",
 		"Amount": "1",
 		"Message": "Heres a little gift :)"
+	}, {
+		"GiftId": "Erolfood1",
+		"PlayerName": "Erol der 5.",
+		"PlayerId": "181771C0-C7C3-4755-BE4D-361DAD1FF302",
+		"Item": "RawCoconut",
+		"Amount": "100",
+		"Message": "Quit killing your Minion"
+	}, {
+		"GiftId": "Uho1",
+		"PlayerName": "Uho",
+		"PlayerId": "8F7677ED-7BB3-431C-B5BD-4FCB11F23AD1",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "Your old book"
+	}, {
+		"GiftId": "Uho2",
+		"PlayerName": "Uho",
+		"PlayerId": "8F7677ED-7BB3-431C-B5BD-4FCB11F23AD1",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "A gift"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
