@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIndex</title>
+</head>
+<body>
+<div id="signDiv">
+</div>
+</body>
+</html>
+<script>
+	var url = window.location.href;
+	let urlVariable = url.split('?')[1];
+	
+	function openInNewTab(coinName, search) {
+		var url = "https://www.google.com.tr/search?q=%22" + coinName + "%22+%22" + search + "%22&oq=%" + coinName + "%22+%22" + search + "%22&aqs=chrome..69i57.246j0j7&sourceid=chrome&ie=UTF-8"
+		var win = window.open(url, '_blank');
+		win.focus();
+		sleep(50);
+	}
+
+	function sleep(milliseconds) {
+	  var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+	    if ((new Date().getTime() - start) > milliseconds){
+	      break;
+	    }
+	  }
+	}
+	//Use "+" sign instead of spaces
+	var coinName = urlVariable;
+
+	openInNewTab(coinName, "Naval+Ravikant");
+	openInNewTab(coinName, "Garry+Tan");
+	openInNewTab(coinName, "Andreas+Antonopoulos");
+	openInNewTab(coinName, "Olaf+Carlson-Wee");
+	openInNewTab(coinName, "Sam+Altman");
+	openInNewTab(coinName, "Vitalik+Buterin");
+	openInNewTab(coinName, "Brian+Armstrong");
+	openInNewTab(coinName, "Aaron+Harris");
+	openInNewTab(coinName, "Sizhao+Yang");
+	openInNewTab(coinName, "Charlie+Lee");
+	openInNewTab(coinName, "Ben+Horowitz");
+	openInNewTab(coinName, "Gavin+Andresen");
+	openInNewTab(coinName, "Fred+Ehrsam");
+</script>
+
+
+
+
