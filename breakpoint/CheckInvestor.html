@@ -20,6 +20,14 @@
 		sleep(50);
 	}
 
+	function openSiteSearchInNewTab(coinName, site) {
+		// https://www.google.com.tr/search?q=site:angel.co+%22ethereum%22&oq=%
+		var url = "https://www.google.com.tr/search?q=site:" + site + "+%22" + coinName + "%22&oq=%"
+		var win = window.open(url, '_blank');
+		win.focus();
+		sleep(50);
+	}
+
 	function sleep(milliseconds) {
 	  var start = new Date().getTime();
 	  for (var i = 0; i < 1e7; i++) {
@@ -31,8 +39,10 @@
 	//Use "+" sign instead of spaces
 	var coinName = urlVariable;
 
-	openInNewTab(coinName, "angellist");
-	openInNewTab(coinName, "crunchbase");
+	openSiteSearchInNewTab(coinName, "angel.co")
+	openSiteSearchInNewTab(coinName, "crunchbase.com")
+	// openInNewTab(coinName, "angellist");
+	// openInNewTab(coinName, "crunchbase");
 	openInNewTab(coinName, "investment");
 	openInNewTab(coinName, "investor");
 	openInNewTab(coinName, "venture+capital");
