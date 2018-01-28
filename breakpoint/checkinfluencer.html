@@ -20,6 +20,14 @@
 		sleep(50);
 	}
 
+	function searchOnTwitter(coinName, person) {
+		var url = "https://twitter.com/search?l=&q=" + coinName + "%20from%3A" + person
+
+		var win = window.open(url, '_blank');
+		win.focus();
+		sleep(50);
+	}
+
 	function sleep(milliseconds) {
 	  var start = new Date().getTime();
 	  for (var i = 0; i < 1e7; i++) {
@@ -31,19 +39,33 @@
 	//Use "+" sign instead of spaces
 	var coinName = urlVariable;
 
-	openInNewTab(coinName, "Naval+Ravikant");
-	openInNewTab(coinName, "Garry+Tan");
-	openInNewTab(coinName, "Andreas+Antonopoulos");
+	searchOnTwitter(coinName, "naval")
+	searchOnTwitter(coinName, "vitalikbuterin")
+	searchOnTwitter(coinName, "garrytan")
+	searchOnTwitter(coinName, "aantonop")
+	searchOnTwitter(coinName, "sama")
+	searchOnTwitter(coinName, "brian_armstrong")
+	searchOnTwitter(coinName, "harris")
+	searchOnTwitter(coinName, "zaoyang")
+	searchOnTwitter(coinName, "SatoshiLite")
+	searchOnTwitter(coinName, "bhorowitz")
+	searchOnTwitter(coinName, "gavinandresen")
+	searchOnTwitter(coinName, "FEhrsam")
+	searchOnTwitter(coinName, "TimDraper")
+	
+	// openInNewTab(coinName, "Naval+Ravikant");
+	// openInNewTab(coinName, "Garry+Tan");
+	// openInNewTab(coinName, "Andreas+Antonopoulos");
 	openInNewTab(coinName, "Olaf+Carlson-Wee");
-	openInNewTab(coinName, "Sam+Altman");
-	openInNewTab(coinName, "Vitalik+Buterin");
+	// openInNewTab(coinName, "Sam+Altman");
+	// openInNewTab(coinName, "Vitalik+Buterin");
 	openInNewTab(coinName, "Brian+Armstrong");
-	openInNewTab(coinName, "Aaron+Harris");
-	openInNewTab(coinName, "Sizhao+Yang");
-	openInNewTab(coinName, "Charlie+Lee");
-	openInNewTab(coinName, "Ben+Horowitz");
-	openInNewTab(coinName, "Gavin+Andresen");
-	openInNewTab(coinName, "Fred+Ehrsam");
+	// openInNewTab(coinName, "Aaron+Harris");
+	// openInNewTab(coinName, "Sizhao+Yang");
+	// openInNewTab(coinName, "Charlie+Lee");
+	// openInNewTab(coinName, "Ben+Horowitz");
+	// openInNewTab(coinName, "Gavin+Andresen");
+	// openInNewTab(coinName, "Fred+Ehrsam");
 </script>
 
 
