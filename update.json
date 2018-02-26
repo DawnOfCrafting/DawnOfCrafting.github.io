@@ -610,6 +610,13 @@
 		"Item": "RawCoconut",
 		"Amount": "100",
 		"Message": "Some food to help you out"
+	}, {
+		"GiftId": "kathrynlydiabelt",
+		"PlayerName": "Dug",
+		"PlayerId": "5C3FCAA9-0A21-4F1E-A6AF-86C53ACBDC98",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
