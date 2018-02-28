@@ -617,7 +617,35 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "Here you go"
-	}],
+	}, {
+		"GiftId": "kathrynlydiaORaidanclarksonfromfb1",
+		"PlayerName": "Dug",
+		"PlayerId": "E3F8BF18-EE12-4A1B-9B99-4C1061AFF953",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go"
+	}, {
+		"GiftId": "kathrynlydiaORaidanclarksonfromfb2",
+		"PlayerName": "Dug",
+		"PlayerId": "E3F8BF18-EE12-4A1B-9B99-4C1061AFF953",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Here you go"
+	}, {
+		"GiftId": "kathrynlydiaORaidanclarksonfromfb3",
+		"PlayerName": "Dug",
+		"PlayerId": "E3F8BF18-EE12-4A1B-9B99-4C1061AFF953",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "Here you go"
+	}, {
+		"GiftId": "kathrynlydiaORaidanclarksonfromfb4",
+		"PlayerName": "Dug",
+		"PlayerId": "E3F8BF18-EE12-4A1B-9B99-4C1061AFF953",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Here you go"
+	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
 		"PlayerId": "04C91867-2168-4EC7-8402-DC6B5F0E7109"
@@ -942,5 +970,3 @@
 	}]
 }
 
-
- 
