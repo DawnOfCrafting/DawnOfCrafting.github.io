@@ -645,6 +645,13 @@
 		"Item": "GrandmasMediumContainer",
 		"Amount": "1",
 		"Message": "Here you go"
+	}, {
+		"GiftId": "SeanAdamsonTablets",
+		"PlayerName": "SeanAdamson",
+		"PlayerId": "D7EFEE2E-8430-48F2-A80B-86EF5D8094CE",
+		"Item": "RecipePartTablet",
+		"Amount": "10",
+		"Message": "Sorry for the bugs"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
