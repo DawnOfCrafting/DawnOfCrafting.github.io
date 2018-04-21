@@ -1,1 +1,25 @@
 
+{
+	"KillBuild": 100,
+	"LatestBuild": 121,
+	"GiftItems": [{
+		"GiftId": "Esq1",
+		"PlayerName": "Esq",
+		"PlayerId": "FCBD2EC5-96D0-4B3F-AA11-4D38CBD99067",
+		"Item": "Turd",
+		"Amount": "2",
+		"Message": "You a cool dev!"
+	}, {
+		"GiftId": "喵喵testitem",
+		"PlayerName": "喵喵",
+		"PlayerId": "51D717E1-471A-4698-984C-2065FC80F662",
+		"Item": "Banana",
+		"Amount": "50",
+		"Message": "Hey, you got this?"
+	}],	
+	"UniqueTAPlayers": [{
+		"PlayerName": "BarcodExpress",
+		"PlayerId": "04C91867-2168-4EC7-8402-DC6B5F0E7109"
+	}]
+}
+
