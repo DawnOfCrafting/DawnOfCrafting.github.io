@@ -16,6 +16,13 @@
 		"Item": "Banana",
 		"Amount": "50",
 		"Message": "Hey, you got this?"
+	}, {
+		"GiftId": "喵喵testitem0423",
+		"PlayerName": "喵喵",
+		"PlayerId": "51D717E1-471A-4698-984C-2065FC80F662",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "佩刀腰带奉上?"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
