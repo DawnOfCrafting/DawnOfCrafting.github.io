@@ -666,6 +666,27 @@
 		"Item": "GrandmasMediumContainer",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "Jess1",
+		"PlayerName": "Jess",
+		"PlayerId": "A614C114-1713-45E7-BD36-540D1D38BEEF",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Jess2",
+		"PlayerName": "Jess",
+		"PlayerId": "A614C114-1713-45E7-BD36-540D1D38BEEF",
+		"Item": "EpicKnife",
+		"Amount": "20",
+		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Jess3",
+		"PlayerName": "Jess",
+		"PlayerId": "A614C114-1713-45E7-BD36-540D1D38BEEF",
+		"Item": "NeanderthalTechnologyTablet",
+		"Amount": "4",
+		"Message": "Sorry for the loss"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
