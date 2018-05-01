@@ -43,6 +43,34 @@
 		"Item": "NeanderthalTechnologyTablet",
 		"Amount": "4",
 		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Gus0",
+		"PlayerName": "Gus",
+		"PlayerId": "C421BF1E-6EB2-48A2-9275-1CEADCB4904F",
+		"Item": "GrandmasMediumContainer",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Gus1",
+		"PlayerName": "Gus",
+		"PlayerId": "C421BF1E-6EB2-48A2-9275-1CEADCB4904F",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Gus2",
+		"PlayerName": "Gus",
+		"PlayerId": "C421BF1E-6EB2-48A2-9275-1CEADCB4904F",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "Gus3",
+		"PlayerName": "Gus",
+		"PlayerId": "C421BF1E-6EB2-48A2-9275-1CEADCB4904F",
+		"Item": "AxeBelt10k",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
