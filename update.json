@@ -71,6 +71,13 @@
 		"Item": "AxeBelt10k",
 		"Amount": "1",
 		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "KrisKnifeBelt",
+		"PlayerName": "Kris",
+		"PlayerId": "6FDA3AB7-30C2-4F0C-B2BA-80DC556EF12B",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Sorry for the loss"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
