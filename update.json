@@ -78,6 +78,13 @@
 		"Item": "KnifeBelt10k",
 		"Amount": "1",
 		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "蜗牛1",
+		"PlayerId": "277B8CFD-23A9-4C46-90EE-7DBE2B23FB2D",
+		"Item": "RecipePartTablet",
+		"Amount": "7",
+		"Message": "Sorry for the loss"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
