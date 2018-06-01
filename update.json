@@ -85,6 +85,13 @@
 		"Item": "RecipePartTablet",
 		"Amount": "7",
 		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "arftestitem",
+		"PlayerName": "arf",
+		"PlayerId": "A92AC2FB-0547-48FC-BBBC-9CECDA4B9E3A",
+		"Item": "Banana",
+		"Amount": "50",
+		"Message": "物品发放测试"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
