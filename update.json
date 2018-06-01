@@ -85,6 +85,76 @@
 		"Item": "RecipePartTablet",
 		"Amount": "7",
 		"Message": "Sorry for the loss"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersGlove25",
+		"Amount": "1",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersGlove-25",
+		"Amount": "1",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersBook3",
+		"Amount": "1",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersApron300",
+		"Amount": "1",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "RecipePartTablet",
+		"Amount": "2",
+		"Message": "存档损坏补偿"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "瓦尔特",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "HammerBelt10k",
+		"Amount": "1",
+		"Message": "下次不要删存档了"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersApron100",
+		"Amount": "1",
+		"Message": "下次不要删存档了"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersBook1",
+		"Amount": "1",
+		"Message": "下次不要删存档了"
+	}, {
+		"GiftId": "recipeparts",
+		"PlayerName": "玖五二柒",
+		"PlayerId": "1DE6214A-2501-435A-9425-24A90D971AF0",
+		"Item": "CraftersGlove15",
+		"Amount": "1",
+		"Message": "下次不要删存档了"
 	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
