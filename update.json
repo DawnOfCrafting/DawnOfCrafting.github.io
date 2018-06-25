@@ -169,6 +169,13 @@
 +		"Item": "CraftersGlove15",
 +		"Amount": "1",
 +		"Message": "下次不要删存档了"
+ 	}, {
++		"GiftId": "testtest",
++		"PlayerName": "Sdfdf",
++		"PlayerId": "E7D3090C-84C5-4736-A0F1-F3B6BAD311A0",
++		"Item": "CraftersGlove15",
++		"Amount": "1",
++		"Message": "helloo"
  	}],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
