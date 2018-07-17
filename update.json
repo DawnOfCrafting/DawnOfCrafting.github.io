@@ -22,7 +22,21 @@
 		"Item": "Banana",
 		"Amount": "50",
 		"Message": "Hey, you got this?"
-	}],	
+	}, {
+        "GiftId": "redditIUseThisForNSFWSubstablet",
+        "PlayerName": "Mark",
+        "PlayerId": "CAED322F-F6D5-4520-8E6E-87D16A95899E",
+        "Item": "RecipePartTablet",
+        "Amount": "5",
+        "Message": "Keep on crafting."
+    }, {
+        "GiftId": "redditIUseThisForNSFWSubsenergy",
+        "PlayerName": "Mark",
+        "PlayerId": "CAED322F-F6D5-4520-8E6E-87D16A95899E",
+        "Item": "Banana",
+        "Amount": "200",
+        "Message": "Keep on crafting."
+    }],	
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
 		"PlayerId": "04C91867-2168-4EC7-8402-DC6B5F0E7109"
