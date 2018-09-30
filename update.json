@@ -43,6 +43,20 @@
 		"Item": "GrandmasMediumContainer",
 		"Amount": "1",
 		"Message": "Here you go!"
+	}, {
+		"GiftId": "KnifeBelt10k1",
+		"PlayerName": "Brett",
+		"PlayerId": "DE1030F2-7A6C-4219-BD98-01759CA3BD79",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
+	}, {
+		"GiftId": "KnifeBelt10k2",
+		"PlayerName": "Brett",
+		"PlayerId": "DE1030F2-7A6C-4219-BD98-01759CA3BD79",
+		"Item": "KnifeBelt10k",
+		"Amount": "1",
+		"Message": "Here you go!"
 	}],
 	"UniqueTAPlayers": [{
 		"PlayerName": "BarcodExpress",
